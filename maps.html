@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The all-new ARBOOX Maps</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FGroup%2014.png?v=1610481912568"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+     .arboox__logo {
+      width: 100px;
+      margin-top: 20px;
+    }
+
+    hr {
+      background-color: #000000;
+      border: none;
+      height: 4px;
+      margin: 0 0 14px;
+      width: 34px;
+      margin-left: 30px;
+      margin-top: -18px;
+      z-index: 10;
+    }
+
+    .copyright {
+      font-family: system-ui;
+      position: relative;
+      text-align: left;
+      font-weight: 600;
+      color: #ABABAB;
+      text-align: center;
+    }
+    
+    #menu {
+position: absolute;
+background: #fff;
+padding: 10px;
+font-family: 'Eina01', sans-serif;
+}
+  </style>
+  <body style="background-color: #FFFFFF;">
+    <br />
+    <center>
+       <div class="topbar">
+           <a href="https://arboox.ca"><img class="arboox__logo" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1614038848559"></a>
+      </div>
+    </center>
+    <h1
+      style="font-family: 'Eina01', system-ui; color: #000000; padding: 30px; padding-top: 15px; position: relative; text-align: center;"
+    >
+      Find your way to <br />
+      augmented reality.
+    </h1>
+    <h3
+      style="font-family: 'Eina01', system-ui; font-size: 18px; position: relative; text-align: center; font-weight: 400;"
+    >
+      With ARBOOX Maps, people <br />
+      can find their way to in-place AR <br />
+      experiences, get driving directions <br />
+      and more.
+    </h3>
+    <br />
+    <br />
+    <center>    <div id="map" style="width: 80%; height: 300px;"></div></center>
+
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYXJib294IiwiYSI6ImNrazBsYXl6NDA3MDUybnBiaHZ5a3IyMjAifQ.NnDbxZILxNDrJqgJcT7Xyg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11"
+      });
+    </script>
+    <div id="menu">
+      <input
+        id="streets-v11"
+        type="radio"
+        name="rtoggle"
+        value="streets"
+        checked="checked"
+      />
+      <label for="streets-v11">streets</label>
+      <input id="light-v10" type="radio" name="rtoggle" value="light" />
+      <label for="light-v10">light</label>
+      <input id="dark-v10" type="radio" name="rtoggle" value="dark" />
+      <label for="dark-v10">dark</label>
+      <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors" />
+      <label for="outdoors-v11">outdoors</label>
+      <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
+      <label for="satellite-v9">satellite</label>
+    </div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYXJib294IiwiYSI6ImNrazBsYXl6NDA3MDUybnBiaHZ5a3IyMjAifQ.NnDbxZILxNDrJqgJcT7Xyg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        zoom: 13,
+        center: [4.899, 52.372]
+      });
+
+      var layerList = document.getElementById("menu");
+      var inputs = layerList.getElementsByTagName("input");
+
+      function switchLayer(layer) {
+        var layerId = layer.target.id;
+        map.setStyle("mapbox://styles/mapbox/" + layerId);
+      }
+
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = switchLayer;
+      }
+    </script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYXJib294IiwiYSI6ImNrazBsYXl6NDA3MDUybnBiaHZ5a3IyMjAifQ.NnDbxZILxNDrJqgJcT7Xyg";
+      var map = new mapboxgl.Map({
+        container: "map", // container id
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [-74.5, 40], // starting position
+        zoom: 9 // starting zoom
+      });
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
+    <br>
+    <br>
+    <br>
+    <p class="copyright">
+      ©ARBOOX 2021
+    </p>
+  </body>
+</html>
