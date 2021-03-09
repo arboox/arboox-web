@@ -12,18 +12,39 @@
   <style>
     body {
       margin: 0px;
-      background-color: #0e1012;
+      background-color: #F8F9FA;
     }
         
-    .arboox__logo {
-      width: 100px;
-      margin-top: 20px;
+    .topbar {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      width: 100%;
+        height: 40px;
     }
     
-    .button__primary:hover {
-      cursor: pointer;
-          -webkit-transition: box-shadow 220ms ease,background-color .3s ease;
-    transition: box-shadow 220ms ease,background-color .3s ease;
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .topbar {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);  
+  }
+    }
+    
+    .arboox__logo {
+      width: 85px;
+      margin-top: 8px;
+      position: relative;
+      pointer-events: none;
+    }
+    
+    .topbar_button {
+      background-color: #000000;
+      border-radius: 22px;
+      border: none;
+      height: 26px;
+      margin-bottom: 2px;
     }
     
     .copyright {
@@ -35,17 +56,6 @@
       color: #ABABAB;
     }
     
-    .feature_showcase {
-      width: 340px;
-      max-width: 100%;
-      text-align: left;
-    }
-    
-    .feature_card {
-      max-width: 100%;
-width: 340px;
-    }
-    
     .footer {
       width: 340px;
       max-width: 100%;
@@ -53,122 +63,30 @@ width: 340px;
       position: relative;
     }
     
+    video {
+      border-radius: 16px;
+    }
+    
   </style>
   <body>
-      <br>
     <center>
       <div class="topbar">
-            <img class="arboox__logo" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20White.svg?v=1613948659136">
+            <img class="arboox__logo" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1614038848559">
       </div>
       <br>
-      <h1 style="font-size: 3rem; max-width: 100%; font-family: 'Eina01'; system-ui; color: #FFFFFF;">
-        Augment your <br> reality.
-      </h1>
-      <br>
-      <p style="color: #9ba2b2; font-family: 'Eina01', system-ui; margin-top: -14px;">
-        Amazing AR experiences with powerful <br> elements to change the way we <br> explore the world.
-      </p>   
-      <br>
-      <button style="padding: 12px 35px;
-    border-radius: 100px;
-    background-color: #0084FF;
-    -webkit-transition: box-shadow 220ms ease,background-color .3s ease;
-    transition: box-shadow 220ms ease,background-color .3s ease;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 500; font-family: 'Eina01', system-ui; width: 300px; border: none;" class="button__primary" onclick="window.location.href='https://airtable.com/shr0UegDrs60UX1o9';">
-      Get Started
-    </button>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="feature_showcase">
-        <img class="feature_card" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fab_featurecard%201.png?v=1613956595697">
-        <br>
-        <br>
-        <text style="font-family: 'Eina01', system-ui; color: #FFFFFF; position: relative; text-align: left; padding: 10px;">
-         It all starts with the card layout. Just pick <br>&ensp;an AR experience and view it right from <br>&ensp;your phone. 
-          <br>
-          <br>
-          &ensp;All experiences are super lightweight <br>&ensp;and easy to view. You can shoot photos or <br>&ensp;record videos and share them with your <br>&ensp;friends and family.
-        </text>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="feature_showcase">
-        <img class="feature_card" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fab_featurecard%202.png?v=1613956678519">
-        <br>
-        <br>
-        <text style="font-family: 'Eina01', system-ui; color: #FFFFFF; position: relative; text-align: left; padding: 10px;">
-         With ARBOOX Maps, you can find the best <br>&ensp;route to get to in-place AR experiences. It <br>&ensp;is powered by Mapbox and Waze.
-          <br>
-          <br>
-          &ensp;In-place AR experiences let people <br>&ensp;explore places like parks and museums <br>&ensp;from other perspectives. You just need to <br>&ensp;scan a code and that's it.
-          <br>
-          <br>
-          <a href="anchors.html" style="color: #0084ff; text-decoration: none;">&ensp;Learn more →</a>
-        </text>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="feature_showcase">
-        <img class="feature_card" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fab_featurecard%203.png?v=1613956617456">
-        <br>
-        <br>
-        <text style="font-family: 'Eina01', system-ui; color: #FFFFFF; position: relative; text-align: left; padding: 10px;">
-         ARBOOX TV lets people watch fun and <br>&ensp;entertaining videos about almost <br>&ensp;anything.
-          <br>
-          <br>
-        <a href="https://forms.gle/37KCmNpmFG59Q8o56" style="color: #0084ff; text-decoration: none;">&ensp;Upload a reel to ABTV →</a>
-        </text>
-      </div>
-            <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="feature_showcase">
-        <img class="feature_card" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fab_featurecard%204.png?v=1613956541604">
-        <br>
-        <br>
-        <text style="font-family: 'Eina01', system-ui; color: #FFFFFF; position: relative; text-align: left; padding: 10px;">
-         Our new rewarding service, Karrott, powers <br>&ensp;up a collective programme. The more <br>&ensp;people that use the app, the more those <br>&ensp;blue numbers will increase. You can then <br>&ensp;exchange them for digital merch. 
-          <br>
-          <br>
-        <a href="https://forms.gle/37KCmNpmFG59Q8o56" style="color: #0084ff; text-decoration: none;">&ensp;About Karrott →</a>
-        </text>
-      </div>
-      <br>
-      <br>
-      <br>
-      <h2 style="color: #FFFFFF; font-family: 'Eina01', system-ui;">
-        Join ARBOOX today.
+      <h2 style="font-family: 'Eina01', system-ui;">
+        Try ARBOOX
       </h2>
-      <br><p style="color: #9ba2b2; font-family: 'Eina01', system-ui; margin-top: -14px;">
-        Become a part of the future of AR. <br> It's free.   
-      </p>   
       <br>
+      <video width="240px" autoplay loop muted>
+  <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVideoleap-2EF3E8B5-BE6C-4AB9-B576-3141E20B265F.webm?v=1615327391139" type="video/webm">
+</video>
       <br>
-      <button style="padding: 12px 35px;
-    border-radius: 100px;
-    background-color: #0084FF;
-    -webkit-transition: box-shadow 220ms ease,background-color .3s ease;
-    transition: box-shadow 220ms ease,background-color .3s ease;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 500; font-family: 'Eina01', system-ui; width: 300px; border: none;" class="button__primary" onclick="window.location.href='https://airtable.com/shr0UegDrs60UX1o9';">
-      Get Started
-    </button>
     <br>
+      <br>
+      <button style="border-radius: 40px; border: none; width: 250px; height: 44px; background-color: #000000;">
+        <a href="http" style="font-family: 'Eina01', system-ui; color: #FFFFFF; text-decoration: none;">Download ARBOOX</a>
+      </button>
     <br>
     <br>
       <br>
