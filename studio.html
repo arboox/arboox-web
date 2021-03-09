@@ -9,6 +9,23 @@
       <link rel="stylesheet" href="/style.css" />
   </head>
   <style>
+    .topbar {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      width: 100%;
+        height: 40px;
+    }
+    
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .topbar {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);  
+  }
+    }
+    
     .footer {
       width: 340px;
       max-width: 100%;
@@ -28,7 +45,9 @@
   <body>
     <center>
       <br>
-      <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FStudio%20Logo%20BlueRush.svg?v=1615228493731" style="width: 150px;">
+      <div class="topbar">
+        <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FStudio%20Logo%20BlueRush.svg?v=1615228493731" style="width: 130px; margin-top: 4px;">
+      </div>
       <br>
       <img src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2Fobject.svg?v=1615216886768" style="pointer-events: none;">
       <br>
