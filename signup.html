@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up • ARBOOX</title>
+    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
+        <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <meta http-equiv="refresh" content="20; url='https://arboox.github.io/arbooxapp'" />
+  </head>
+  <style>
+    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
+    
+    body {
+      background-color: #F8F9FA;
+    } 
+    
+    .arbooxSignUpView {
+      width: 300px;
+      height: 400px;
+      background-color: #FFFFFF;
+      position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
+      -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
+      -moz-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
+      -ms-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
+      -o-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
+      border-radius: 12px;
+    }
+    
+    input {
+      width: 260px;
+      height: 34px;
+      font-family: 'Avenir Next', Avenir, system-ui;
+      background-color: #F0F0F0;
+      border: none;
+      padding: 4px;
+      border-radius: 10px;
+    }
+    
+    button {
+      width: 90px;
+      height: 34px;
+      border: none;
+      border-radius: 22px;
+      font-family: 'Avenir Next', Avenir, system-ui;
+      background-color: #0084FF;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <center>
+      <div class="arbooxSignUpView">
+        <br>
+      <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" style="width: 26px; pointer-events: none; border-radius: 4px;">
+        <br>
+        <h2 style="font-family: 'Avenir Next', Avenir, system-ui; font-weight: 800; font-size: 22px;">
+          Sign Up to ARBOOX
+        </h2>
+        <br>
+        <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec">
+          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
+            Email or Phone Number
+          </p>
+  <input name="email" type="email" required>
+          <br>
+          <br>
+          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
+            Name
+          </p>
+  <input name="name" type="text" required>
+          <br>
+          <br>
+  <button type="submit">Sign Up</button>
+</form>
+    </div>
+      <br>
+      <a href="https://arboox.github.io/arbooxapp" style=
+"font-family: 'Avenir Next', Avenir, system-ui; color: #000000; text-decoration: none;">Already have ARBOOX? Log In</a>
+    </center>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    <script>
+       function redirect() {
+         window.location.href="https://arboox.github.io";
+       }
+     </script>
+  </body>
+</html>
