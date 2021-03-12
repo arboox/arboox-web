@@ -10,7 +10,7 @@
     <script src="/script.js" defer></script>
   </head>
   <style>
-    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
+    @import url("https://arboox-web.glitch.me/style.css");
     
     body {
       margin: 0px;
@@ -77,12 +77,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c6ff",endCo
     }
     
     .copyright {
-      font-family: 'Avenir Next', system-ui;
+      font-family: 'Eina01', system-ui;
       position: relative;
       text-align: left;
-      margin-left: 30px;
       font-weight: 600;
       color: #ABABAB;
+      padding-top: 80px;
     }
   </style>
   <body>
@@ -97,71 +97,40 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c6ff",endCo
       <br>
       <img class="museum_card" src="https://cdn.glitch.com/a737c789-ffa2-499c-99a5-8616f6e5cdaa%2Fppfabcollab.png?v=1615511131565">
       <br>
-      <div style="z-index: 11; position: relative; top: -180px; width: 200px; height: 40px; border-radius: 20px; border: none; background-color: #0084FF">
-        <a href="https://www.vectary.com/viewer-ar/v1/?model=c6a641a5-fca5-443b-9445-c5e68859de10&env=" style="color: #FFFFFF; font-family: 'Avenir Next', Avenir, system-ui; text-decoration: none;">View Type Museum in AR</a>
-      </div>
+      <button style="z-index: 11; position: relative; top: -180px; width: 200px; height: 40px; border-radius: 20px; border: none; background-color: #0084FF">
+        <a href="https://www.vectary.com/viewer-ar/v1/?model=c6a641a5-fca5-443b-9445-c5e68859de10&env=" style="color: #FFFFFF; font-family: 'Eina01', system-ui; text-decoration: none;">View Type Museum in AR</a>
+      </button>
       <br>
       <div class="content">
-        <h2 style="font-family: 'Avenir Next', Avenir, system-ui; display: inline-block;">
+        <h2 style="font-family: 'Eina01', system-ui; display: inline-block;">
           Type Museum
         </h2>
         <br>
-        <p style="font-family: 'Avenir Next', Avenir, system-ui; margin-top: -16px; color: #C5C5C5">
+        <p style="font-family: 'Eina01', system-ui; margin-top: -16px; color: #C5C5C5">
           In collaboration with Pangram Pangram® Foundry, we built Type Museum: a place to watch some of the most beloved typefaces in action, all in augmented reality.
         </p>
         <br>
-        <button style="font-family: 'Avenir Next', Avenir, system-ui; background-color: transparent; border: none; color: #0084FF; cursor: pointer;">
-        Share with the world
-        </button>
-        <br>
-        <h2 style="font-family: 'Avenir Next', Avenir, system-ui; display: inline-block; padding-top: 50px;">
+        <h2 style="font-family: 'Eina01', system-ui; display: inline-block; padding-top: 50px;">
           What you'll find
         </h2>
         <br>
-        <p style="font-family: 'Avenir Next', Avenir, system-ui; margin-top: -16px; color: #C5C5C5">
+        <p style="font-family: 'Eina01', system-ui; margin-top: -16px; color: #C5C5C5">
           We've crafted Type Museum with love, and every thing on it is super high quality. There are five typefaces you can spot on this AR museum: <strong>Editorial New, Mondwest, NeueBit, Monument Extended and Neue Machina</strong>.We've also included some decoration (houseplants and palm trees), so you have an amazing experience. 
         </p>
-        <h2 style="font-family: 'Avenir Next', Avenir, system-ui; display: inline-block; padding-top: 50px;">
-          Gestures
-        </h2>
         <br>
-        <p style="font-family: 'Avenir Next', Avenir, system-ui; margin-top: -16px; color: #C5C5C5">
-          There are some gestures you can use to control objects in AR:
-          <ul>
-            <li style="color: #0084FF; font-family: 'Avenir Next', Avenir, system-ui;">Drag and drop the object with one finger to change its position.</li>
-            <br>
-            <li style="color: #0084FF; font-family: 'Avenir Next', Avenir, system-ui;">Pinch with two fingers to zoom in or zoom out. Works for rescaling the objects in the AR experience.</li>
-            <br>
-            <li style="color: #0084FF; font-family: 'Avenir Next', Avenir, system-ui;">Pan the object with two fingers to rotate it.</li>
-        </ul>
-        </p>   
+        <img src="https://cdn.glitch.com/a737c789-ffa2-499c-99a5-8616f6e5cdaa%2Fmuseumimage%201.png?v=1615557562349" width="100%" style="border-radius: 18px; pointer-events: none;">
       <br>
     <br>
-      <br>
+        <br>
+        <a href="https://pangrampangram.com" style="font-family: 'Eina01', system-ui; color: #0084FF; text-decoration: none;">Get the fonts at Pangram Pangram® →</a>
+        <br>
+        <br>
+        <a href="https://www.notion.so/arboox/Privacy-Policy-e463851d6c35421da7a42a58a5e3913f" style="font-family: 'Eina01', system-ui; color: #0084FF; text-decoration: none;">Privacy Policy</a>
+        <br>
     <p class="copyright">
-      ©ARBOOX 2021
+    ©ARBOOX 2021. The PP®F logo is a trademark of Pangram Pangram®. The ARBOOX logo and the BlueRush gradient are trademarks of ARBOOX.
       </p>
       </div>
     </center>
-    <script>
-      let shareData = {
-        title: 'Type Museum: Pangram Pangram in collaboration with ARBOOX',
-        text: 'Share this AR experience with the world',
-        url: 'https://arboox.ca/typemuseum',
-      }
-
-      const btn = document.querySelector('button');
-      const resultPara = document.querySelector('.result');
-
-      btn.addEventListener('click', () => {
-        navigator.share(shareData)
-          .then(() =>
-            resultPara.textContent = 'MDN shared successfully'
-          )
-          .catch((e) =>
-            resultPara.textContent = 'Error: ' + e
-          )
-      });
-    </script>
   </body>
 </html>
