@@ -12,7 +12,7 @@
   <style>
     body {
       margin: 0px;
-      background-color: #F8F9FA;
+      background-color: #FFFFFF;
     }
         
     .topbar {
@@ -21,7 +21,8 @@
       top: 0;
       background-color: rgba(255, 255, 255, 0.95);
       width: 100%;
-        height: 40px;
+        height: 50px;
+      z-index: 10;
     }
     
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -34,9 +35,10 @@
     
     .arboox__logo {
       width: 85px;
-      margin-top: 8px;
+      margin-top: 12px;
       position: relative;
       pointer-events: none;
+      margin-left: 20px;
     }
     
     .topbar_button {
@@ -69,30 +71,40 @@
     
   </style>
   <body>
-    <center>
       <div class="topbar">
             <img class="arboox__logo" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1614038848559">
       </div>
       <br>
-      <h2 style="font-family: 'Eina01', system-ui;">
-        Try ARBOOX
-      </h2>
+    <center>
+      <div data-tilt>
+                  <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Farbooxogimage.png?v=1615816858276" style="width: 90%; z-index: 1; filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      -moz-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      -ms-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      -o-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25)); border-radius: 5px; pointer-events: none;">
+      </div>
+    </center>
+    <br>
+    <h2 style="position: relative; text-align: center; font-family: 'Eina01', system-ui;">
+      A new way to explore the world, <br> with endless posibilities.
+    </h2>
       <br>
-      <video width="240px" autoplay loop muted>
-  <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVideoleap-2EF3E8B5-BE6C-4AB9-B576-3141E20B265F.mp4?v=1615410663903" type="video/mp4">
-</video>
-      <br>
+    <p style="font-family: system-ui; color: #555555; margin-top: -18px; position: relative; text-align: center;">
+      ARBOOX is an augmented reality app made for <br> everyone. You can place objects anywhere around <br> you, shoot photos, record videos, and share AR <br> experiences with your friends and family.
+    </p>
+    <br>
+    <center>
+       <button style="font-family: system-ui; width: 180px; height: 35px; background-color: #0094FF; border-radius: 5px; border: none;">
+      <a href="https://arboox.ca/signup" style="color: #FFFFFF; text-decoration: none;">Sign Up</a>
+    </button>
+    </center>
+    <br>
     <br>
       <br>
-      <button style="border-radius: 40px; border: none; width: 250px; height: 44px; background-color: #000000;">
-        <a href="https://arboox.ca/signup" style="font-family: 'Eina01', system-ui; color: #FFFFFF; text-decoration: none;">Get Started</a>
-      </button>
-    <br>
-    <br>
       <br>
       <br>
-      <br>
-    <div class="footer">
+    <center>
+      <div class="footer">
       <a style="font-family: 'Eina01', system-ui; text-decoration: none; margin-left: 30px; color: #0084FF; font-size: 14px; display: inline-block;" href="https://www.notion.so/arboox/ARBOOX-for-education-b9b70c898f5a4e85b809c2464bdc1150">FOR EDUCATION</a>
     &ensp;
     <a style="font-family: 'Eina01', system-ui; text-decoration: none; color: #0084FF; font-size: 14px; display: inline-block;" href="forbusiness.html">ADS</a>
@@ -132,7 +144,7 @@
     </div>
     </center>
     <script async defer data-domain="arboox.ca" src="https://plausible.io/js/plausible.js"></script>
-
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
   </body>
 </html>
