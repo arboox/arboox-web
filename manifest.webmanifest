@@ -1,0 +1,29 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "ARBOOX",
+  "short_name": "ARBOOX",
+  "scope": "/app",
+  "display": "standalone",
+  "start_url": "https://arboox.ca/app",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0094FF",
+  "description": "",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": "false",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.com/99f47cc5-a3af-41bd-9426-43d887207b59%2Fapp_icon_pwa.png?v=1617234928233",
+      "type": "image/png",
+      "sizes": "400x400"
+    },
+    {
+      "src": "https://cdn.glitch.com/99f47cc5-a3af-41bd-9426-43d887207b59%2Fapp_icon_pwa.png?v=1617234928233",
+      "sizes": "512x512",
+      "type": "false"
+    }
+  ],
+  "url": "https://arboox.ca/app",
+  "screenshots": []
+}
