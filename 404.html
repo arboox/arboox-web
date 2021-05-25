@@ -10,51 +10,93 @@
     <script src="script.js" defer></script>
   </head>
   <style>
-    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
-    
-    .copyright {
-      font-family: 'Eina01', system-ui;
+    body {
+      margin: 0px;
+      background-color: #000000;
+    }
+
+    .topbar {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      height: 50px;
+      z-index: 10;
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .topbar {
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .arboox__logo {
+      width: 100px;
+      margin-top: 12px;
       position: relative;
-      text-align: center;
+      pointer-events: none;
+      margin-left: 20px;
+    }
+
+    .topbar_button {
+      background-color: #000000;
+      border-radius: 22px;
+      border: none;
+      height: 26px;
+      margin-bottom: 2px;
+    }
+
+    .copyright {
+      font-family: "Neue Plak", system-ui;
+      position: relative;
+      text-align: left;
+      margin-left: 30px;
       font-weight: 600;
       color: #ABABAB;
     }
-    
-    .footer {
-      width: 340px;
-      max-width: 100%;
-      text-align: center;
-      position: relative;
+
+    .artboard404 {
+      width: 80%;
+      border-radius: 16px;
     }
   </style>
   <body>
-    <h1 style="font-family: 'Avenir Next', system-ui; text-align: center; font-size: 42px;">
+    <div class="topbar">
+      <img
+        class="arboox__logo"
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20White.svg?v=1618838333023"
+      />
+      <br />
+      <a
+        href="https://arboox.ca/"
+        style="font-family: 'Neue Plak', system-ui; position: relative; text-align: right; display: block; top: -30px; right: 20px; text-decoration: none; color: #0094FF; font-weight: 600;"
+      >
+        Get back in track
+      </a>
+    </div>
+    <br>
+    <center>
+    <img class="artboard404" src="https://cdn.dribbble.com/users/618554/screenshots/11097403/media/bb1edd2a4b719e8e17475973a45b0897.png?compress=1&resize=1600x1200">
+    </center>
+    <br>
+    <h1 style="font-family: 'Neue Plak', system-ui; text-align: center; font-size: 30vw; font-weight: 600; margin-top: -1px; color: #F6F6F6;">
       404
     </h1>
     <br>
-    <p style="font-family: 'Avenir Next', system-ui; text-align: center; margin-top: -30px;">
-      Well this is empty. <br> In the meantime, you can check out <br> these awesome links:
+    <p style="font-family: 'Neue Plak', system-ui; text-align: center; margin-top: -90px; font-size: 8vw; padding: 12px; color: #F6F6F6;">
+    Either you're a time traveler, or you got lost in space.
     </p>
     <br>
     <br>
     <br>
     <br>
     <center>
-      <div class="footer">
-      <a style="font-family: 'Eina01', system-ui; text-decoration: none; color: #0084FF; font-size: 14px; display: inline-block;" href="https://twitter.com/ArbooxAR">Our Twitter</a>
-    &ensp;
-    <a style="font-family: 'Eina01', system-ui; text-decoration: none; color: #0084FF; font-size: 14px; display: inline-block;" href="https://instagram.com/arbooxar">We're on Instagram too</a>
-    <br>
-        <br>
-<a style="font-family: 'Eina01', system-ui; text-decoration: none; color: #0084FF; font-size: 14px; display: inline-block;" href="https://www.instagram.com/ar/897085954401303/">Try our AR filters</a>
-      &ensp;
-    <a style="font-family: 'Eina01', system-ui; text-decoration: none; color: #0084FF; font-size: 14px; display: inline-block;" href="https://www.youtube.com/watch?v=v_450Cm65Lo">Watch some memes</a>
-    <br>
-    <br>
       <p class="copyright">
       ©ARBOOX 2021
       </p>
-    </div>
     </center>
   </body>
 </html>
