@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - ARBOOX™</title>
+    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0px;
+      background-color: #FFFFFF;
+    }
+
+    .topbar {
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 50px;
+      z-index: 10;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .topbar {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF95;
+      }
+    }
+
+    .arboox__logo {
+      width: 100px;
+      margin-top: 12px;
+      position: relative;
+      pointer-events: none;
+      margin-left: 20px;
+    }
+
+    .topbar_button {
+      background-color: #000000;
+      border-radius: 22px;
+      border: none;
+      height: 26px;
+      margin-bottom: 2px;
+    }
+
+    .copyright {
+      font-family: "Neurial Grotesk", system-ui;
+      font-weight: 600;
+      color: #ABABAB;
+    }
+
+    .footer {
+      width: 340px;
+      max-width: 100%;
+      text-align: left;
+      position: relative;
+    }
+
+    video {
+      width: 90%;
+    }
+
+    .signup-launchlink {
+      width: 254px;
+      height: 42px;
+      border-radius: 22px;
+      border: none;
+      background-color: #222222;
+      position: relative;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      cursor: pointer;
+      transition: linear 200ms;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+      z-index: 8;
+    }
+
+    .signup-launchlink:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      box-shadow: inset 0 0 80px #0094FF, inset 20px 0 80px #FFFFFF,
+        inset -20px 0 80px #F0F0F0, inset 20px 0 300px #0094FF,
+        inset -20px 0 300px #F0F0F0, 0 0 50px #FFFFFF, -10px 0 80px #FFFFFF,
+        10px 0 20px #22222210;
+    }
+    
+    .animate-third {
+  -webkit-animation-delay: 600ms;
+  -moz-animation-delay: 600ms;
+  -o-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+    
+    .animate-fourth {
+  -webkit-animation-delay: 700ms;
+  -moz-animation-delay: 700ms;
+  -o-animation-delay: 700ms;
+  animation-delay: 700ms;
+}
+    
+        .animate-fifth {
+  -webkit-animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  -o-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+  </style>
+  <body>
+    <div class="topbar">
+      <img
+        class="arboox__logo"
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1618838333051"
+      />
+      <br />
+      <a
+        href="#press-assets"
+        style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: right; display: block; top: -28px; right: 20px; text-decoration: none; color: #000000; font-weight: 600;"
+      >
+        Press Kit
+      </a>
+    </div>
+    <center>
+      <br>
+    <h1 class="animate-reveal animate-first" style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase">
+      This is us.
+    </h1>
+      <br>
+      <p class="animate-reveal animate-second" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; margin-top: -20px; width: 300px;">
+        ARBOOX™ is where augmented reality becomes the world's source of inspiration.
+      </p>
+      <br>
+      <button class="signup-launchlink animate-reveal animate-third">
+        <a href="#press-assets" style="color: #F6F6F6; text-decoration: none;">Download Press Kit</a>
+      </button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <video class="animate-reveal animate-fourth" autoplay>
+  <source src="https://www.apple.com/105/media/us/environment/2020/597041ed-8d87-4e1a-bb29-f1efc75766a6/anim/hero/large_2x.mp4" type="video/mp4">
+</video>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 140px; width: 320px; text-align: left;">
+        De México para el mundo
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; width: 320px; margin-top: -40px; text-align: left; color: #CCCCCC">
+        From Mexico to the world
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; width: 320px; margin-top: -40px; text-align: left; color: #CCCCCC">
+        Du Mexique au monde
+      </p>
+       <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; width: 320px; margin-top: -40px; text-align: left; color: #CCCCCC">
+        Fra Mexico til verden
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; width: 320px; margin-top: -40px; text-align: left; color: #CCCCCC">
+        Ó Mheicsiceo go dtí an domhan
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; width: 320px; margin-top: -40px; text-align: left; color: #CCCCCC">
+        من المكسيك إلى العالم
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; text-align: left; color: #CCCCCC">
+        We're proudly a mexican startup. Our mission is to make augmented reality accessible to anyone, that's why we started our worldwide expansion with countries like Australia, Canada, United Kingdom, Ireland, USA, France, Saudi Arabia, UAE, Qatar, Egypt, Norway, Sweden, Finland, and more to come soon.
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 140px; width: 320px; text-align: left;">
+        We put people at the center of everything we do
+      </p>
+            <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; margin-top:-16px; text-align: left; color: #CCCCCC">
+        ARBOOX™ is an augmented reality app made for everyone. This means that accessibility is present at all times, from the design to the development and the production. We always think about our users' needs to shape the look and feel of the app.
+      </p>
+      <br>
+      <img src="https://cdn.shopify.com/s/files/1/0312/2737/9849/files/asset-home-carousel-img-4-v2.png" style="width: 320px;">
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 140px; width: 320px; text-align: left;">
+        Around the globe we go
+      </p>
+            <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; margin-top:-16px; text-align: left; color: #CCCCCC">
+        At ARBOOX™, we're open to meeting new people, new cultures and living the experiences. That's why, we've set the goal to open physical stores and galleries by 2025 worldwide. Our first store will be located at the heart of Nuevo Polanco, Mexico City. 
+      </p>
+      <br>
+      <img src="https://cdn.filepicker.io/api/file/eIqV9vepSAawK5fRfahW/convert?fit=max&h=&quality=95&w=612&compress=true&fit=max" style="width: 320px;">
+      <br>
+<p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; width: 320px; text-align: left; color: #CCCCCC">
+        This ain't the store, but it's the zone.
+      </p>
+      <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 140px; width: 320px; text-align: left;">
+        Our future plans
+      </p>
+            <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; margin-top:-16px; text-align: left; color: #CCCCCC">
+        Even though we're just getting started, we already have future plans for ARBOOX™. We announce them each year at the ABWK (ARBOOX™ Worldwide Keynote). For example, we already have some  ideas about our HQ, however, you'll hear all about it on January 22nd, 2022.
+      </p>
+      <br>
+<p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; width: 320px; text-align: left; color: #CCCCCC">
+        January 22nd, 2021 is ARBOOX™'s launch date, that's why we make our global conferences as close as we can to that date every year.
+      </p>
+      <br>
+      <div id="press-assets">
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 140px; width: 320px; text-align: left;">
+        Download our press kit and brand assets
+      </p>
+            <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; margin-top:-16px; text-align: left; color: #CCCCCC">
+       Download official ARBOOX™ logos, badges and product screenshots, as well as our design guidelines.
+      </p>
+        <br>
+        <br>
+        <div style="width: 320px; height: 516px; background-color: #FFFFFF; filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Flogo-kit.png?v=1623883089537" style="width: 90%; margin-top: 16px; border-radius: 6px;">
+          <br>
+          <h2 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; positon: relative; margin-left: 20px; font-weight: 500;">
+            Logo Kit and <br> Guidelines
+          </h2>
+          <br>
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; position: relative; text-align: left; margin-left: 20px; margin-top: -26px; margin-right: 20px;">
+            The logo kit includes the ARBOOX™ text logo, as well as the app icon and the badge. The PNG and SVG versions are available inside the compressed file.
+          </p>
+          <br>
+          <button onclick="window.location.href='https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Flogo-kit.zip?v=1623886922393';" class="signup-launchlink">
+            Download (1.6 MB)
+          </button>
+        </div>
+        <br>
+        <br>
+        <div style="width: 320px; height: 516px; background-color: #FFFFFF; filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdevicehero.png?v=1623807862203" style="width: 90%; margin-top: 16px; border-radius: 6px;">
+          <br>
+          <h2 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; positon: relative; margin-left: 20px; font-weight: 500;">
+            Product Mockups and Screenshot Kit
+          </h2>
+          <br>
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; position: relative; text-align: left; margin-left: 20px; margin-top: -26px; margin-right: 20px;">
+            The mockup and screenshot kit includes multiple mobile app screens in both light and dark interfaces, as well as mockups of app features and elements inside a compressed file.
+          </p>
+          <br>
+          <button onclick="window.location.href='https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fscreen-and-mockup-kit.zip?v=1623887521727';" class="signup-launchlink">
+            Download (22 MB)
+          </button>
+        </div>
+      </div>
+      <br>
+     <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 32px; margin-top: 100px; width: 320px; text-align: left;">
+        Can't find what you're looking for?
+      </p>
+            <br>
+      <p class="animate-reveal animate-fifth" style="font-family: 'Neurial Grotesk', system-ui; font-size: 20px; width: 320px; margin-top:-16px; text-align: left; color: #CCCCCC">
+        Don't worry, we've got you covered. You can send us an <a href="mailto:arbooxapp@gmail.com" style="color: #CCCCCC;">e-mail</a> and we will reply as soon as we can with all the assets and information you need.
+      </p>
+      <br>
+      <br>
+       <p class="copyright">
+        ©ARBOOX™ 2021
+      </p>
+    </center>
+    <br>
+    <br>
+  </body>
+</html>
