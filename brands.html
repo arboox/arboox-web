@@ -4,46 +4,90 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Brands - ARBOOX™</title>
+    <meta name="title" content="ARBOOX™ For Brands: Bring your company to more people" />
+    <meta
+      name="description"
+      content="Thanks to its versatility and easeness, the world's most popular brands and design studios trust ARBOOX™ to deliver and maximize conversion rates, while scaling the brand's popularity to more people."
+    />
+    <meta
+      name="keywords"
+      content="ARBOOX™, ARBOOX, arboox, augmented reality, AR, mobile app, brands, business, company"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <title>ARBOOX™ for Brands</title>
     <link
       rel="shortcut icon"
       href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="/script.js" defer></script>
-    <script
-      async
-      defer
-      data-domain="arboox.ca"
-      src="https://plausible.io/js/plausible.js"
-    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arboox.ca/brands" />
+    <meta
+      property="og:title"
+      content="ARBOOX™ for Brands: Bring your company to more people"
+    />
+    <meta
+      property="og:description"
+      content="Thanks to its versatility and easeness, the world's most popular brands and design studios trust ARBOOX™ to deliver and maximize conversion rates, while scaling the brand's popularity to more people."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrandshero.png?v=1623858273695"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://arboox.ca/brands" />
+    <meta
+      property="twitter:title"
+      content="ARBOOX™ for Brands: Bring your company to more people"
+    />
+    <meta
+      property="twitter:description"
+      content="Thanks to its versatility and easeness, the world's most popular brands and design studios trust ARBOOX™ to deliver and maximize conversion rates, while scaling the brand's popularity to more people."
+    />
+    <meta
+      property="twitter:image"
+      content="Thanks to its versatility and easeness, the world's most popular brands and design studios trust ARBOOX™ to deliver and maximize conversion rates, while scaling the brand's popularity to more people."
+    />
+    <script
+      defer
+      data-domain="arboox.ca"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
   </head>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body {
       margin: 0px;
       background-color: #FFFFFF;
-      overflow-x: hidden;
     }
 
     .topbar {
-      position: sticky;
-      position: -webkit-sticky;
-      top: 0;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: #FFFFFF;
       width: 100%;
       height: 50px;
       z-index: 10;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       .topbar {
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
-        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF95;
       }
     }
 
@@ -82,40 +126,58 @@
     video {
       border-radius: 16px;
     }
-    
-      .arbooxSignUpView {
-      width: 300px;
-      height: 1040px;
-      background-color: #FFFFFF;
-        padding: 20px;
-      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
-      -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
-      -moz-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
-      -ms-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
-      -o-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
-      border-radius: 12px;
+
+    .signup-launchlink {
+      width: 254px;
+      height: 42px;
+      border-radius: 22px;
+      border: none;
+      background-color: #222222;
+      position: relative;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      cursor: pointer;
+      transition: linear 200ms;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+      z-index: 8;
+    }
+
+    .signup-launchlink:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      box-shadow: inset 0 0 80px #0094FF, inset 20px 0 80px #FFFFFF,
+        inset -20px 0 80px #F0F0F0, inset 20px 0 300px #0094FF,
+        inset -20px 0 300px #F0F0F0, 0 0 50px #FFFFFF, -10px 0 80px #FFFFFF,
+        10px 0 20px #22222210;
+    }
+
+    .appstoretag {
+      transition: linear 120ms;
+    }
+
+    .appstoretag:hover {
+      filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
     }
     
     input {
       width: 260px;
       height: 34px;
-      font-family: 'Avenir Next', Avenir, system-ui;
+      font-family: 'Neurial Grotesk', system-ui;
       background-color: #F0F0F0;
       border: none;
       padding: 4px;
       border-radius: 10px;
+      transition: linear 100ms;
+      color: #888888;
     }
     
-    button {
-      width: 90px;
-      height: 34px;
-      border: none;
-      border-radius: 22px;
-      font-family: 'Avenir Next', Avenir, system-ui;
-      background-color: #0084FF;
-      color: #FFFFFF;
-      cursor: pointer;
-      margin-top: 32px;
+    input:focus {
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+      outline: none;
+      border: solid 1.4px #00000012;
     }
   </style>
   <body>
@@ -127,234 +189,200 @@
       <br />
       <a
         href="#apply"
-        style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: right; display: block; top: -30px; right: 20px; text-decoration: none; color: #0094FF; font-weight: 600;"
+        style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: right; display: block; top: -28px; right: 20px; text-decoration: none; color: #000000; font-weight: 600;"
       >
         Apply
       </a>
     </div>
+    <center>
+      <br />
+      <h1
+        style="position: relative; text-align: center; font-family: 'Neurial Grotesk', system-ui; font-size: min(max(32px) 8vw); font-weight: 500; width: 300px;"
+        class="animate-reveal animate-first"
+      >
+        Bring your brand or creative studio to more people.
+      </h1>
+      <br />
+      <br />
+      <button class="signup-launchlink">
+        <a href="#apply" style="color: #F6F6F6; text-decoration: none;">Apply</a>
+      </button>
+    </center>
     <br />
-    <h1
-      style="position: relative; text-align: center; font-family: 'Neurial Grotesk', system-ui; font-size: 8vw; font-weight: 600; "
-      class="animate-reveal animate-first"
-    >
-      Bring your brand <br />
-      to more people
-    </h1>
-    <br />
-    <p
-      style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: center; font-weight: 600; margin-top: -10px;"
-      class="animate-reveal"
-    >
-      SCROLL DOWN
-    </p>
     <br />
     <br />
     <center>
       <img
-        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrands.png?v=1620169305499"
-        width="100%;"
-        class="animate-reveal"
-        style="margin-top: -40px;"
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrandshero.png?v=1623858273695"
+        style="width: 90%;"
+        class="animate-reveal animate-second"
       />
-      <br />
+      <br>
+      <br>
       <p
-        style="font-family: 'Neurial Grotesk', system-ui; font-size: 28px; font-weight: 600;"
+        style="font-family: 'Neurial Grotesk', system-ui; font-size: 28px; font-weight: 600; width: 300px; text-transform: uppercase;"
       >
-        REACH HUNDREDS OF <br />
-        POTENTIAL CUSTOMERS <br />
-        IN ONE PLACE
+      AB Shopping is where the world's best brands are.
       </p>
-      <br />
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-align: center; width: 280px;"
+      >
+        Thanks to its versatility and easeness, the world's most popular brands and design studios trust ARBOOX™ to deliver and maximize conversion rates, while scaling the brand's popularity to more people.
+      </p>
     </center>
-    <p
-      style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-align: center; margin-top: -10px;"
-    >
-      ARBOOX™ Shopping is trusted by <br />
-      the most popular brands in the world due <br />
-      to it's simple but amazing purchase experience.
-    </p>
+    <br />
     <br />
     <center>
-      <button
-        style="width: 200px; height: 36px; border-radius: 20px; border: none; background-color: #0094FF"
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-transform: uppercase; font-weight: 500"
       >
-        <a
-          href="#apply"
-          style="color: #FFFFFF; font-family: 'Neurial Grotesk', system-ui; text-decoration: none; font-weight: 600;"
-          >Apply now</a
-        >
-      </button>
+        Scroll down to learn more
+      </p>
       <br />
       <br />
       <br />
-      <div style="width: 100%; height: 80%; background-color: #F8F8F8;">
+      <div
+        style="width: 80%; height: 760px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
-          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px;"
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
         >
-          YOUR PRODUCTS. <br />
-          YOUR STORE.
+          Your profile, your brand.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px;">
-          When you become an ARBOOX™ Brand, <br />
-          you get access to your own profile, <br />
-          unlimited space to sell merch, <br />
-          and so much more.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px; width: 260px;"
+        >
+          When you become an ARBOOX™ Brand, you get access to a public profile in which users can purchase your products, view your videos or read what you're up to.
         </p>
         <br />
-        <img
-          src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrand_set_1.png?v=1621960249281"
-          width="100%"
-        />
+        <div style="width: 280px; height: 300px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrand-profile-preview-1.png?v=1623861193131"
+            style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
+        </div>
         <br />
         <br />
       </div>
-      <div style="width: 100%; height: 90%; background-color: #F1F2F1;">
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 604px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
-          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px;"
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
         >
-          SHOPPING IS GOOD. <br />
-          BUT IT GETS BETTER.
+          Made for individuals and teams.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px;">
-          ARBOOX™ Shopping redefines eCommerce <br />
-          in a way no one has ever done before, by <br />
-          letting shoppers preview products in <br />
-          augmented reality.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 260px;"
+        >
+          Even if you don't sell anything, or if it's just <i>lil ol' you</i>, you can still sign up to get a public profile and show people your content.
         </p>
         <br />
-        <div style="width: 214px;">
-          <video style="width: 100%; z-index: 2; border-radius: 16px;" autoplay loop>
+        <div style="width: 330px; height: 300px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FGroup%2012.png?v=1623863346011"
+            style="width: 100%;"
+          />
+        </div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 620px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
+        >
+          Launch campaigns that produce a bigger impact.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;"
+        >
+          When you launch a campaign in ARBOOX™ it will appear in the explore section
+        </p>
+        <br />
+        <div style="width: 310px; height: 300px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fcampaign-preview-1.png?v=1623868579302"
+            style="width: 110%;"
+          />
+        </div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 1110px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 280px; margin-top:  12px;"
+        >
+          Offer product previews in augmented reality.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 270px;"
+        >
+          Optionally, your brand can offer AR product previews to let users view your products in augmented reality. You only need a 3D model.
+        </p>
+        <br />
+        <div style="width: 260px;">
+          <video
+            style="width: 100%; z-index: 2; border-radius: 12px; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));"
+            autoplay
+            loop
+          >
             <source
               src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.mp4?v=1621963061421"
               type="video/mp4"
             />
-            <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.webm?v=1621972828033" type="video/webm">
+            <source
+              src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.webm?v=1621972828033"
+              type="video/webm"
+            />
           </video>
-          <br>
-          </div>
-        <br>
-      </div>
-        <br>
-      <br>
-              <div style="width: 100%; height: 90%; background-color: #FCFCFC; margin-top: -38px;">
-        <br />
-        <p
-          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px;"
-        >
-          MANAGE YOUR COMPANY'S <br> LOOK AND FEEL WITH THE <br> NEW BRAND STUDIO.
-        </p>
-        <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px;">
-          Brand Studio makes it easy for everyone <br> to submit products for review, add custom <br> widgets to a brand profile and so much more. <br> Even from your mobile.
-        </p>
-        <br />
-                <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FGoogle%20Chrome%20-%20Light%201.png?v=1622427944652" style="width: 100%">
-                <br>
+          <br />
         </div>
-       <div style="width: 100%; height: 80%; background-color: #F8F8F8; margin-top: -4px;">
         <br />
-        <p
-          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px;"
-        >
-          ARBOOX™ BRANDS ARE <br> FOR EVERYONE.
-        </p>
+        <div style="width: 280px; height: 300px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftutorial-asset-4.png?v=1622758191903"
+            style="width: 95%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
+        </div>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px;">
-          Even if you don't sell merch, you're still <br> invited to join our fast-growing brand crew. <br> Custom widgets in your profile let you <br> showcase your creative work, your <br> Twitter feed, your latest song, <br> and more.
-        </p>
-        <br />
-        <img
-          src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbrand_set_2.png?v=1622476197863"
-          width="100%"
-        />
-         <br>
-         <br>
-         <br>
-         <p style="font-family: 'Neurial Grotesk'; system-ui; color: #ABABAB;">
-           Take a look at our widget collection
-         </p>
-         <br>
-         <br>
-         <h2 style="font-family: 'Neurial Grotesk', system-ui;">
-           Twitter
-         </h2>
-         <br>
-                  <p style="font-family: 'Neurial Grotesk'; system-ui; margin-top: -24px;">
-           The Twitter widget lets you display <br> a symbolic tweet. For example, <br> a pinned tweet.
-         </p>
-         <br>
-         <div data-tilt>
-         <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2F2021-05-31%20(1).png?v=1622477832102" style="width: 60%; border-radius: 8px; box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);">
       </div>
-        <br />
-         <br>
-         <h2 style="font-family: 'Neurial Grotesk', system-ui;">
-           Spotify
-         </h2>
-         <br>
-                  <p style="font-family: 'Neurial Grotesk'; system-ui; margin-top: -24px;">
-           Show your audience what you're <br> listening to or your latest musical release.
-         </p>
-         <br>
-         <br>
-         <div data-tilt>
-         <img src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2F2021-05-29%20(1).png?v=1622306918238" style="width: 60%; border-radius: 8px; box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.28);">
-      </div>
-         <br>
-         <br>
-         <h2 style="font-family: 'Neurial Grotesk', system-ui;">
-           Dribbble
-         </h2>
-         <br>
-                  <p style="font-family: 'Neurial Grotesk'; system-ui; margin-top: -24px;">
-           Publish your latest or your most popular <br> Dribbble shot to your Brand profile.
-         </p>
-         <br>
-         <div data-tilt>
-         <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FGroup%209.png?v=1622479162377" style="width: 60%; border-radius: 8px; box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);">
-      </div>
-                  <br>
-         <br>
-         <h2 style="font-family: 'Neurial Grotesk', system-ui;">
-           YouTube
-         </h2>
-         <br>
-                  <p style="font-family: 'Neurial Grotesk'; system-ui; margin-top: -24px;">
-           If you create videos, or want to say hi <br> to your visitors in a special way, you can <br> always embed a YouTube video in <br> your profile.
-         </p>
-         <br>
-         <div data-tilt>
-         <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FGroup%2010.png?v=1622480249909" style="width: 60%; border-radius: 8px; box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.28);">
-      </div>
-         <br>
-        <br />
-         <br>
-      </div>
+      <br />
+      <br />
       <div
-        style="width: 100%; height: 740px; background-color: #0094FF; margin-top: -32px;"
+        style="width: 80%; height: 204px; background-color: #0094FF; margin-top: -28px; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
       >
         <h3
           style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; font-weight: 600; position: relative; text-align: left; margin-left: 20px; padding-top: 20px; font-size: 28px;"
         >
-          Let's get <br />
-          you set up.
+          Let's get you <br> set up.
         </h3>
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; position: relative; text-align: left; margin-left: 20px; margin-top: -30px;"
         >
-          ARBOOX™ is ready to <br />
-          welcome your brand.
+          ARBOOX™ is ready to <br> welcome your brand.
           <br />
           <br />
           <a
-            href="#apply"
+            href="https://arboox.ca/setup"
             style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; position: relative; text-align: left; text-decoration: none; font-weight: 600;"
-            >Apply (It's free)&ensp;<span
+            >Apply&ensp;<span
               class="material-icons-round"
               style="font-size: 18px; position: relative; top: 4px;"
               >arrow_downward</span
@@ -368,67 +396,58 @@
               width="80px"
           /></span>
         </p>
-        <br>
-        <video style="width: 214px; margin-top: 100px; border-radius: 22px;" autoplay loop>
-          <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFullSizeRender_Trim.mp4?v=1621965360086" type="video/mp4">
-          <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFullSizeRender_Trim.webm?v=1621971710785" type="video/webm">
-        </video>
-        <br>
-        <img src="https://preview.framercdn.com/images/devices/pixel-4-just-black.png" style="width: 256px; position: relative; top: -482px;">
-        <br>
       </div>
-      <br />
+      <br>
+      <br>
       <div
-        style="width: 100%; height: 1300px; background-color: #F8F9FA; margin-top: -38px;" id="apply"
-      >
-        <br>
-        <h1 style="font-family: 'Neurial Grotesk', system-ui; font-weight:  600;">
-          Apply to become <br> an ARBOOX™ Brand
-        </h1>
-        <br>
-              <div class="arbooxSignUpView">
-        <br>
-      <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" style="width: 26px; pointer-events: none; border-radius: 4px;">
-        <br>
-        <h2 style="font-family: 'Avenir Next', Avenir, system-ui; font-weight: 800; font-size: 22px;">
-          Apply to be a Brand
-        </h2>
-        <br>
+        style="width: 80%; height: 800px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+       id="apply">
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px; text-align: left;"
+        >
+          Sign up to become an ARBOOX™ Brand.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px; text-align: left; margin-left: -4px;"
+        >
+          Thanks for your interest. Please fill the form below in order to complete your brand application. We will contact you via e-mail to set up your brand profile and to show you how to make the most of ARBOOX™.
+        </p>
+        <br />  
+        <center>
         <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbwWHh3s0q2qKlW4EalCBklqLxLWeJlxGpDuwmHfpofApQuDt4q8/exec">
-          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
-            Email
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Email <b style="color: #FF3A44">*</b>
           </p>
   <input name="email" type="email" required>
           <br>
           <br>
-          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
-            Brand name
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Brand name <b style="color: #FF3A44">*</b>
           </p>
   <input name="brandname" type="text" required>
             <br>
           <br>
-          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
-            Your brand's TW or IG username
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Your brand's TW or IG username <b style="color: #FF3A44">*</b>
           </p>
   <input name="twitter" type="text" required>
           <br>
           <br>
-          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 14px; color: #ABABAB;">
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
             Website
           </p>
-  <input name="website" type="text" required>
+  <input name="website" type="text">
           <br>
           <br>
-  <button type="submit">Sign Up</button>
+  <button class="signup-launchlink" style="margin-top: 26px;" type="submit">Sign Up</button>
           <br>
           <br>
-          <p style="font-family: 'Avenir Next', Avenir, system-ui; font-size: 12px; position: relative; text-align: left; padding-left: 14px; padding-right: 14px; color: #ABABAB;">
-            There's no need to click the Submit button multiple times, your response will be received as soon as you tap it. After you submit your answer, we'll review your request and create your profile. This process takes aproximately 10 minutes, but sometimes it can take up to 48 hours. Once your profile is ready, we'll let you know in an e-mail. Make sure to check your inbox and your junk folder since this e-mail contains the instructions to preview your profile, use Brand Studio, etcetera. If something goes wrong, or you're concerned that your response wasn't received, you can always fill and submit the form again or contact our support team via <a href="mailto:arbooxapp@gmail.com" style="color: #ABABAB;">e-mail</a>. We're active from Monday to Friday from 8 AM to 12 PM CST (Central Standard Time). 
-          </p>
 </form> 
+        <br />
+        </center>
       </div>
-      </div>
-    </center>
     <br />
     <br />
     <center>
@@ -442,6 +461,7 @@
         >Back to ARBOOX™</a
       >
     </center>
+    </center>
          <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwWHh3s0q2qKlW4EalCBklqLxLWeJlxGpDuwmHfpofApQuDt4q8/exec'
   const form = document.forms['submit-to-google-sheet']
@@ -453,12 +473,5 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
-    <script>
-       function redirect() {
-         window.location.href="https://arboox.github.io";
-       }
-     </script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
   </body>
 </html>
