@@ -23,10 +23,45 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="/script.js" defer></script>
-            <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arboox.ca/" />
+    <meta
+      property="og:title"
+      content="ARBOOX™ - The future of augmented reality"
+    />
+    <meta
+      property="og:description"
+      content="ARBOOX™ is an augmented reality app made for everyone. It lets people view objects in augmented reality, play games, watch videos, preview and purchase products, and so much more."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdevicehero.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://arboox.ca/" />
+    <meta
+      property="twitter:title"
+      content="ARBOOX™ - The future of augmented reality"
+    />
+    <meta
+      property="twitter:description"
+      content="ARBOOX™ is an augmented reality app made for everyone. It lets people view objects in augmented reality, play games, watch videos, preview and purchase products, and so much more."
+    />
+    <meta
+      property="twitter:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdevicehero.png"
+    />
+    <script
+      defer
+      data-domain="arboox.ca"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
   </head>
   <style>
     body {
@@ -45,13 +80,13 @@
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .topbar {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: #FFFFFF95;  
-  }
-}
-    
+      .topbar {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF95;
+      }
+    }
+
     .arboox__logo {
       width: 100px;
       margin-top: 12px;
@@ -87,7 +122,7 @@
     video {
       border-radius: 16px;
     }
-    
+
     .signup-launchlink {
       width: 254px;
       height: 42px;
@@ -95,35 +130,30 @@
       border: none;
       background-color: #222222;
       position: relative;
-      font-family: 'Neurial Grotesk', system-ui;
+      font-family: "Neurial Grotesk", system-ui;
       color: #FFFFFF;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.6px;
       cursor: pointer;
       transition: linear 200ms;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
       z-index: 8;
     }
-    
+
     .signup-launchlink:hover {
       transform: scale(1.1);
       filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
-      box-shadow:
-    inset 0 0 80px #0094FF,
-    inset 20px 0 80px #FFFFFF,
-    inset -20px 0 80px #F0F0F0,
-    inset 20px 0 300px #0094FF,
-    inset -20px 0 300px #F0F0F0,
-    0 0 50px #FFFFFF,
-    -10px 0 80px #FFFFFF,
-    10px 0 20px #22222210;
+      box-shadow: inset 0 0 80px #0094FF, inset 20px 0 80px #FFFFFF,
+        inset -20px 0 80px #F0F0F0, inset 20px 0 300px #0094FF,
+        inset -20px 0 300px #F0F0F0, 0 0 50px #FFFFFF, -10px 0 80px #FFFFFF,
+        10px 0 20px #22222210;
     }
-    
+
     .appstoretag {
-     transition: linear 120ms;
+      transition: linear 120ms;
     }
-    
+
     .appstoretag:hover {
       filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
     }
@@ -143,20 +173,20 @@
       </a>
     </div>
     <center>
-      <br>
-    <h1
-      style="position: relative; text-align: center; font-family: 'Neurial Grotesk', system-ui; font-size: min(max(32px) 8vw); font-weight: 500; width: 250px;"
-      class="animate-reveal animate-first"
-    >
-      Experience the world around you.
-    </h1>
-    <br>
-      <br>
-    <button class="signup-launchlink">
-      Sign Up
-    </button>
+      <br />
+      <h1
+        style="position: relative; text-align: center; font-family: 'Neurial Grotesk', system-ui; font-size: min(max(32px) 8vw); font-weight: 500; width: 250px;"
+        class="animate-reveal animate-first"
+      >
+        Experience the world around you.
+      </h1>
+      <br />
+      <br />
+      <button class="signup-launchlink">
+        Sign Up
+      </button>
     </center>
-    <br>
+    <br />
     <br />
     <br />
     <center>
@@ -174,33 +204,42 @@
       <br />
       <div style="display: inline-block">
         <a href="https://arboox.ca/setup"
-          ><img class="appstoretag"
-            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%20(1)%202.svg?v=1623801803144" style="width: 136px;"/></a
-        >&emsp;<a
-          href="https://arboox.ca/setup"
-          ><img class="appstoretag"
-            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%202.svg?v=1623801806299" style="width: 136px;"
+          ><img
+            class="appstoretag"
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%20(1)%202.svg?v=1623801803144"
+            style="width: 136px;"/></a
+        >&emsp;<a href="https://arboox.ca/setup"
+          ><img
+            class="appstoretag"
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%202.svg?v=1623801806299"
+            style="width: 136px;"
         /></a>
       </div>
     </center>
     <br />
     <center>
-    <p
-      style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-align: center; width: 320px;"
-    >
-      ARBOOX™ is an augmented reality app made for everyone. It lets people view objects in augmented reality, play games, watch videos, preview and purchase products, and so much more.
-    </p>
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-align: center; width: 320px;"
+      >
+        ARBOOX™ is an augmented reality app made for everyone. It lets people
+        view objects in augmented reality, play games, watch videos, preview and
+        purchase products, and so much more.
+      </p>
     </center>
     <br />
     <br />
     <center>
-      <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-transform: uppercase; font-weight: 500">
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-transform: uppercase; font-weight: 500"
+      >
         Scroll down to learn more
       </p>
       <br />
       <br />
       <br />
-      <div style="width: 80%; height: 540px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+      <div
+        style="width: 80%; height: 540px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
@@ -208,24 +247,34 @@
           It's augmented, but feels real.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px; width: 260px;">
-          ARBOOX™ features an extensive set of high quality augmented reality experiences and new ones are added over time. By just tapping a card, you can unlock amazing AR content.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px; width: 260px;"
+        >
+          ARBOOX™ features an extensive set of high quality augmented reality
+          experiences and new ones are added over time. By just tapping a card,
+          you can unlock amazing AR content.
         </p>
         <br />
         <div style="width: 280px; height: 300px;">
-          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Far-preview-1.png?v=1623799407328" style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Far-preview-1.png?v=1623799407328"
+            style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
         </div>
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-size: 8px; color: #CCCCCC; margin-top: -90px; width: 280px;"
         >
-          Some devices might not support ARBOOX™ based on model, manufacturer, etcetera.
+          Some devices might not support ARBOOX™ based on model, manufacturer,
+          etcetera.
         </p>
         <br />
       </div>
-<br>
-            <br />
-      <div style="width: 80%; height: 730px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 730px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
@@ -233,85 +282,123 @@
           Read about popular and interesting topics.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;">
-          Stories are 1-to-5-minute readings in which users can learn something new whenever they want.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;"
+        >
+          Stories are 1-to-5-minute readings in which users can learn something
+          new whenever they want.
         </p>
         <br />
         <div style="width: 280px; height: 300px;">
-          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fstories-preview-1.png?v=1623803994965" style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fstories-preview-1.png?v=1623803994965"
+            style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
         </div>
         <br />
       </div>
-<br>
-      <br>
-      <div style="width: 80%; height: 620px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 620px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
         >
-         Watch hand-picked videos.
+          Watch hand-picked videos.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;">
-          Each week, we select relevant, interesting or popular videos and add them to ARBOOX™ so you can watch them from the app.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;"
+        >
+          Each week, we select relevant, interesting or popular videos and add
+          them to ARBOOX™ so you can watch them from the app.
         </p>
         <br />
         <div style="width: 280px; height: 300px;">
-          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftutorial-asset-3.png?v=1622757804494" style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftutorial-asset-3.png?v=1622757804494"
+            style="width: 90%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+          />
         </div>
         <br />
       </div>
-      <br>
-      <br>
-      <div style="width: 80%; height: 380px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 380px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
         >
-         Play in-app games.
+          Play in-app games.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 224px;">
-          ARBOOX™ Arcade features a growing collection of in-app games that you can launch and play seamlessly without leaving the app.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 224px;"
+        >
+          ARBOOX™ Arcade features a growing collection of in-app games that you
+          can launch and play seamlessly without leaving the app.
         </p>
         <br />
         <div style="width: 280px; height: 300px;">
-          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbites.png?v=1619984367964" style="width: 96%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fbites.png?v=1619984367964"
+            style="width: 96%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
         </div>
         <br />
       </div>
-      <br>
-      <br>
-      <div style="width: 80%; height: 1170px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;">
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 1170px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
         <br />
         <p
           style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 250px; margin-top:  12px;"
         >
-         Preview and purchase products in augmented reality.
+          Preview and purchase products in augmented reality.
         </p>
         <br />
-        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 270px;">
-          ARBOOX™ collaborates with the world's best brands to create a new shopping and checkout experience. You can try on clothes or view home decoration in your space, without even having to get into a store.
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 270px;"
+        >
+          ARBOOX™ collaborates with the world's best brands to create a new
+          shopping and checkout experience. You can try on clothes or view home
+          decoration in your space, without even having to get into a store.
         </p>
         <br />
         <div style="width: 260px;">
-          <video style="width: 100%; z-index: 2; border-radius: 12px; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));" autoplay loop>
+          <video
+            style="width: 100%; z-index: 2; border-radius: 12px; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));"
+            autoplay
+            loop
+          >
             <source
               src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.mp4?v=1621963061421"
               type="video/mp4"
             />
-            <source src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.webm?v=1621972828033" type="video/webm">
+            <source
+              src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.webm?v=1621972828033"
+              type="video/webm"
+            />
           </video>
-          <br>
-          </div>
-        <br>
+          <br />
+        </div>
+        <br />
         <div style="width: 280px; height: 300px;">
-          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftutorial-asset-4.png?v=1622758191903" style="width: 95%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftutorial-asset-4.png?v=1622758191903"
+            style="width: 95%; filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2)); border-radius: 12px;"
+          />
         </div>
         <br />
       </div>
-      <br>
-      <br>
+      <br />
+      <br />
       <div
         style="width: 80%; height: 204px; background-color: #0094FF; margin-top: -28px; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
       >
