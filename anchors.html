@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="ARBOOX™ - Live the experiences" />
+    <meta
+      name="description"
+      content="ARBOOX™ is a powerful augmented reality app that lets you explore the world from different perspectives. For iOS and Android."
+    />
+    <meta
+      name="keywords"
+      content="ARBOOX™, ARBOOX, arboox, augmented reality, AR, mobile app"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <title>ARBOOX™ - The future of augmented reality</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arboox.ca/" />
+    <meta
+      property="og:title"
+      content="ARBOOX™ - The future of augmented reality"
+    />
+    <meta
+      property="og:description"
+      content="ARBOOX™ is an augmented reality app made for everyone. It lets people view objects in augmented reality, play games, watch videos, preview and purchase products, and so much more."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdevicehero.png?v=1623807862203"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://arboox.ca/" />
+    <meta
+      property="twitter:title"
+      content="ARBOOX™ - The future of augmented reality"
+    />
+    <meta
+      property="twitter:description"
+      content="ARBOOX™ is an augmented reality app made for everyone. It lets people view objects in augmented reality, play games, watch videos, preview and purchase products, and so much more."
+    />
+    <meta
+      property="twitter:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdevicehero.png?v=1623807862203"
+    />
+    <script
+      defer
+      data-domain="arboox.ca"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+     <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0px;
+      background-color: #FFFFFF;
+    }
+
+    .topbar {
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 50px;
+      z-index: 10;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .topbar {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF95;
+      }
+    }
+
+    .arboox__logo {
+      width: 100px;
+      margin-top: 12px;
+      position: relative;
+      pointer-events: none;
+      margin-left: 20px;
+    }
+
+    .topbar_button {
+      background-color: #000000;
+      border-radius: 22px;
+      border: none;
+      height: 26px;
+      margin-bottom: 2px;
+    }
+
+    .copyright {
+      font-family: "Neurial Grotesk", system-ui;
+      position: relative;
+      text-align: center;
+      font-weight: 600;
+      color: #ABABAB;
+    }
+
+    .footer {
+      width: 340px;
+      max-width: 100%;
+      text-align: left;
+      position: relative;
+    }
+
+    video {
+      border-radius: 16px;
+    }
+
+    .signup-launchlink {
+      width: 254px;
+      height: 42px;
+      border-radius: 22px;
+      border: none;
+      background-color: #222222;
+      position: relative;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      cursor: pointer;
+      transition: linear 200ms;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+      z-index: 8;
+    }
+
+    .signup-launchlink:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+      box-shadow: inset 0 0 80px #0094FF, inset 20px 0 80px #FFFFFF,
+        inset -20px 0 80px #F0F0F0, inset 20px 0 300px #0094FF,
+        inset -20px 0 300px #F0F0F0, 0 0 50px #FFFFFF, -10px 0 80px #FFFFFF,
+        10px 0 20px #22222210;
+    }
+
+    .appstoretag {
+      transition: linear 120ms;
+    }
+
+    .appstoretag:hover {
+      filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+    }
+    
+    input {
+      width: 260px;
+      height: 34px;
+      font-family: 'Neurial Grotesk', system-ui;
+      background-color: #F0F0F0;
+      border: none;
+      padding: 4px;
+      border-radius: 10px;
+      transition: linear 100ms;
+      color: #888888;
+    }
+    
+    input:focus {
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+      outline: none;
+      border: solid 1.4px #00000012;
+    }
+  </style>
+  <body>
+    <div class="topbar">
+      <img
+        class="arboox__logo"
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1618838333051"
+      />
+      <br />
+      <a
+        href="#apply"
+        style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: right; display: block; top: -28px; right: 20px; text-decoration: none; color: #000000; font-weight: 600;"
+      >
+        Become a partner
+      </a>
+    </div>
+    <center>
+      <br />
+      <h1
+        style="position: relative; text-align: center; font-family: 'Neurial Grotesk', system-ui; font-size: min(max(32px) 8vw); font-weight: 500; width: 380px;"
+        class="animate-reveal animate-first"
+      >
+        Immerse in a world of unique experiences, only at unique places.
+      </h1>
+      <br />
+      <br />
+      <button class="signup-launchlink">
+        <a href="#apply" style="color: #F6F6F6; text-decoration: none;">Become a partner</a>
+      </button>
+    </center>
+    <br />
+    <br />
+    <br />
+    <center>
+      <img
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fanchorshero.png?v=1624037681024"
+        style="width: 90%;"
+        class="animate-reveal animate-second"
+      />
+      <br />
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; font-size: 28px; font-weight: 600; width: 260px; text-transform: uppercase;"
+      >
+        Find anchors at museums, malls, restaurants and more.
+      </p>
+      <br />
+      
+    </center>
+    <br />
+    <center>
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-align: center; width: 320px; margin-top: -40px;"
+      >
+        ARBOOX™ partners with places like museums and malls in Australia, Canada, France, Mexico, UAE and the United Kingdom to bring anchors closer to people. An anchor is an "in-place" AR experience, this means it can only be seen and activated in one place. 
+      </p>
+    </center>
+    <br />
+    <br />
+    <center>
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-transform: uppercase; font-weight: 500"
+      >
+        Scroll down to learn more
+      </p>
+      <br />
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 640px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
+        >
+          It's like playing treasure hunt.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -30px; width: 280px;"
+        >
+          ARBOOX™ has a map that shows you where Anchors are located around the globe. This map can also give you accurate directions to get to that place.
+        </p>
+        <br />
+        <div id="map" style="width: 80%; height: 360px; border-radius: 16px;"></div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 674px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+ l    >
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
+        >
+          Just scan and launch.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 300px;"
+        >
+          When you arrive at the place where the Anchor is located, just open your camera and scan look for the code in the poster, then scan it. You don't need to have ARBOOX™ installed or to create an account.
+        </p>
+        <br />
+        <div style="width: 280px; height: 300px;">
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAnchor%20-%20Arabic%20(UAE).png?v=1624044019753"
+            style="width: 90%; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 10px;"
+          />
+        </div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <div
+  id="apply"        style="width: 80%; height: 802px; background-color: #FFFFFF; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; font-weight: 600; font-size: 24px; width: 260px; margin-top:  12px;"
+        >
+          Interested? Let's make a partnership.
+        </p>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; margin-top: -28px; width: 250px;"
+ >
+          We're actively looking to collaborate with museums, shops, malls or restaurants worldwide to bring anchor experiences closer to people. If you're interested in becoming our partner, please fill the form below.       </p>
+        <br />
+        <form action="https://script.google.com/macros/s/AKfycbyGhXDT4uobxDJ80Z_0u3ZJHihLqeGgzRkmqin1CCojbTl66VG7XGl5_-r7fVmPSH2e/exec" name="submit-to-google-sheet">
+  <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Email <b style="color: #FF3A44">*</b>
+          </p>
+  <input name="email" type="email" required>
+          <br>
+          <br>
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Your name <b style="color: #FF3A44">*</b>
+          </p>
+  <input name="name" type="text" required>
+            <br>
+          <br>
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Name of the museum, mall or shop <b style="color: #FF3A44">*</b>
+          </p>
+  <input name="brandname" type="text" required>
+          <br>
+          <br>
+          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; padding-left: 30px; color: #ABABAB;">
+            Website <b style="color: #FF3A44">*</b>
+          </p>
+  <input name="website" type="text" required>
+          <br>
+          <br>
+  <button class="signup-launchlink" style="margin-top: 26px;" type="submit">Become a partner</button>
+          <br>
+          <br>
+</form>
+        <br />
+      </div>
+      <br />
+      <br />
+      <div
+        style="width: 80%; height: 220px; background-color: #0094FF; margin-top: -28px; filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.09)); border-radius: 12px;"
+      >
+        <h3
+          style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; font-weight: 600; position: relative; text-align: left; margin-left: 20px; padding-top: 20px; font-size: 28px;"
+        >
+          EXPAND YOUR <br> BUSINESS.       </h3>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; position: relative; text-align: left; margin-left: 20px; margin-top: -30px;"
+        >
+          You can also sign up <br> to become an ARBOOX™ <br> Brand.         <br />
+          <br />
+          <a
+            href="https://arboox.ca/setup"
+            style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; position: relative; text-align: left; text-decoration: none; font-weight: 600;"
+            >Learn more&ensp;<span
+              class="material-icons-round"
+              style="font-size: 18px; position: relative; top: 4px;"
+              >arrow_forward</span
+            ></a
+          >
+          <br />
+          <span
+            style="text-align: right; display: block; margin-top: -200px; margin-right: 20px; position: relative; top: 100px;"
+            ><img
+              src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Farbooxbadge.svg?v=1619989229383"
+              width="80px"
+          /></span>
+        </p>
+      </div>
+    </center>
+    <br />
+    <br />
+    <center>
+       
+      <a
+        href="https://arboox.ca/brands"
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-decoration: none; display: inline-block;"
+        >For brands</a
+      >
+      &ensp;
+      <a
+        href="https://arboox.ca/anchors"
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-decoration: none; display: inline-block;"
+        >Anchor experiences</a
+      >
+      &ensp;
+      <a
+        href="https://arboox.ca/about"
+        style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB; text-decoration: none; display: inline-block;"
+        >About</a
+      >
+      <br>
+      <br>
+      <p class="copyright">
+        ©ARBOOX™ 2021
+      </p>
+      <br>
+      <br>
+    </center>
+             <script>
+        mapboxgl.accessToken =
+          "pk.eyJ1IjoiYXJib294IiwiYSI6ImNrazBsYXl6NDA3MDUybnBiaHZ5a3IyMjAifQ.NnDbxZILxNDrJqgJcT7Xyg";
+        var map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/arboox/ckn83hpva106217mjk1h3ko23",
+          center: [-73.97460503891138, 40.77263911269625],
+          zoom: 12
+        });
+
+        map.addControl(new mapboxgl.NavigationControl());
+
+        var marker1 = new mapboxgl.Marker({ color: "#FF6868" })
+          .setLngLat([-99.20226787751646, 19.438998937165582])
+          .addTo(map);
+
+        var marker2 = new mapboxgl.Marker({ color: "#FF6868" })
+          .setLngLat([-73.98552114498212, 40.75821848334573])
+          .addTo(map);
+
+        var marker3 = new mapboxgl.Marker({ color: "#FF6868" })
+          .setLngLat([-123.10330692059763, 49.27989244906147])
+          .addTo(map);
+
+        var marker4 = new mapboxgl.Marker({ color: "#FF6868" })
+          .setLngLat([55.19983552382186, 25.119816697839596])
+          .addTo(map);
+           
+           var marker5 = new mapboxgl.Marker({ color: "#FF6868" })
+          .setLngLat([151.208843552938, -33.86988658389301])
+          .addTo(map);
+
+        map.addControl(
+          new mapboxgl.GeolocateControl({
+            positionOptions: {
+              enableHighAccuracy: true
+            },
+            trackUserLocation: true
+          })
+        );
+      </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyGhXDT4uobxDJ80Z_0u3ZJHihLqeGgzRkmqin1CCojbTl66VG7XGl5_-r7fVmPSH2e/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+  </body>
+</html>
