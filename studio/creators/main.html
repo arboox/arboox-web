@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/99f47cc5-a3af-41bd-9426-43d887207b59%2Fapp_icon_pwa.png?v=1617234928233"
+    />
+    <title>ARBOOX™ Creator Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="ARBOOX™ Studio" />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2Fapp_icon_studio.png?v=1621903262660"
+      sizes="512x512"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2Fapp_icon_studio.png?v=1621903262660"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import: url('https://arboox.ca/style.css');
+    
+    body {
+      font-family: 'Neurial Grotesk', system-ui;
+      overflow-x: hidden;
+    }
+    
+    .preview {
+      width: 240px;
+      height: 364px;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      border: solid 1.2px #E1E4E8;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.09));
+    }
+    
+    input {
+      width: 200px;
+      height: 34px;
+      font-family: 'Neurial Grotesk', system-ui;
+      background-color: #F0F0F0;
+      border: none;
+      padding: 4px;
+      border-radius: 10px;
+      transition: linear 100ms;
+      color: #888888;
+    }
+    
+    input:focus {
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+      outline: none;
+      border: solid 1.4px #00000012;
+    }
+    
+        button {
+          width: 68px;
+      height: 42px;
+      border-radius: 22px;
+      border: none;
+      background-color: #222222;
+      position: relative;
+      font-family: 'Neurial Grotesk', system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      cursor: pointer;
+      transition: linear 200ms;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+    }
+    
+    button:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+    }
+    
+    .wrap {
+      width: 300px;
+    }
+    
+    .preview-header-image {
+      background-color: #FBFBFB;
+    }
+    
+    .preview-video {
+      background-color: #FBFBFB;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1E2329;
+        color: #ADBAC7;
+      }
+      
+      input {
+        background-color: #22272E;
+        border: solid 0.6px #ADBAC750;
+      }
+      
+      input:focus {
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+      outline: none;
+      border: solid 1.4px #ADBAC750;
+    }
+      
+      button {
+        background-color: #373E47;
+      }
+      
+      .preview {
+        background-color: #2D333B;
+        border: solid 1.2px #444C56;
+      }
+      
+      .preview-header-image {
+        background-color: #444C56;
+      }
+      
+      .preview-video {
+      background-color: #444C56;
+    }
+    }
+  </style>
+<body>
+  <center>
+    <div class="wrap">
+      <br>
+    <h2 style="padding-top: 20px;">
+      Set up Friendly Profile
+    </h2>
+    <br>
+      <br>
+      <br>
+    <div class="preview">
+      <div class="preview-header-image" style="width: 100%; height: 180px; border-radius: 12px 12px 0px 0px;">
+        <img src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2FFrame%201.png?v=1624889127857" id="demo4" style="width: 100%; height: 100%; border-radius: 12px 12px 0px 0px; z-index: -2; background-size: auto 100%; background-position: center; border: 0;">
+        <div style="background: rgb(116,116,116);
+background: linear-gradient(180deg, rgba(116,116,116,0.4) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 40px; position: relative; top: -184px; border-radius: 12px 12px 0px 0px;">
+      <span class="material-icons-round" style="position: relative; top: 6px; left: -96px; cursor: pointer; z-index: 100; color: #FFFFFF;">expand_more</span>
+        </div>
+        <br>
+        <p id="demo" style="font-size: 22px; position: relative; top: -186px; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); color: #FFFFFF;">
+          Person name
+        </p>
+        <br>
+        <p id="demo2" style="margin-top: -220px; width: 200px; word-break: break-all; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); color: #FFFFFF;">
+          Profile description
+        </p>
+        <br>
+        <p id="demo3" style="margin-top: -28px; width: 200px; word-break: break-all; font-size: 12px; color: #0094FF; cursor: pointer; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);">
+          website.com
+        </p>
+      </div>
+      <br>
+      <h4 style="text-align: left; margin-top: -2px; margin-left: 18px;">
+        Highlighted video
+      </h4>
+      <br>
+      <div class="preview-video" style="width: 83%; height: 100px; margin-top: -40px; border-radius: 8px; filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));">
+        <p id="demo5" style="text-align: left; position: relative; top: 50px; left: 16px; word-break: break-all; font-weight: 500;">
+          Video name
+        </p>
+        <br>
+        <p style="text-align: left; position: relative; top: 2px; left: 16px; font-size: 10px; cursor: pointer;">
+          Play
+        </p>
+      </div>
+    </div>
+    <br>
+    <br>
+      <br>
+      <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbzGZOUw5GHDGK_q_EW8sEIf-l0JbUZOpZS9w__P1-73rqJkGj0/exec">
+            <p style="text-align: left;">
+      Profile name <b style="color: #FF6868;">*</b>
+    </p>
+    <input type="text"
+           id="myText" name="profile-name" required>
+  &ensp;
+    <button type="button" 
+            onclick="myFunction()">
+      Set
+  </button>
+        <br>
+        <br>
+        <br>
+            <p style="text-align: left;">
+      Profile description <b style="color: #FF6868;">*</b>
+    </p>
+        <input type="text"
+           id="myText2" name="profile-description" required>
+  &ensp;
+    <button type="button" 
+            onclick="myFunction2()">
+      Set
+  </button>
+        <br>
+        <br>
+        <br>
+            <p style="text-align: left;">
+      Website
+    </p>
+        <input type="text"
+           id="myText3" name="website">
+  &ensp;
+    <button type="button" 
+            onclick="myFunction3()">
+      Set
+  </button>
+                <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            <h3 style="text-align: left;">
+      Header
+    </h3>
+        <br>
+        <p style="font-size: 14px; text-align: left; margin-top: -22px;">
+          Optionally, you can upload a header image to make your profile look just how you want it. Just paste the URL below and tap the 'Set' button to preview your header image.
+        </p>
+        <br>
+        <input type="text"
+           id="myText4" name="header-url">
+  &ensp;
+    <button type="button" 
+            onclick="myFunction4()">
+      Set
+  </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 style="text-align: left;">
+          Highlighted video <b style="color: #FF6868;">*</b>
+        </h3>
+        <br>
+        <p style="font-size: 14px; text-align: left; margin-top: -22px;">
+          A highlighted video is required, however, it doesn't have to be yours. You can select any video from YouTube, Instagram and more. We do the hard stuff for you, so you only need to provide a link and a name.
+        </p>
+        <br>
+               <p style="text-align: left;">
+      Video name <b style="color: #FF6868;">*</b>
+    </p>
+        <input type="text"
+           id="myText5" name="video-name" required>
+  &ensp;
+    <button type="button" 
+            onclick="myFunction5()">
+      Set
+  </button>
+        <br>
+        <br>
+        <p style="text-align: left; font-size: 10px;">
+          Disclaimer: some videos may be subject to copyright, that's why we recommend you to use the exact title. If the video does not have a title, or you hold the rights for it, feel free to name it however you want.
+        </p>
+        <br>
+        <br>
+        <br>
+                  <p style="text-align: left;">
+      Link <b style="color: #FF6868;">*</b>
+    </p>
+        <input style="width: 300px;" type="text" name="video-url" required>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button style="width: 280px;" type="submit">
+          Create my profile
+        </button>
+      </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </center>
+    <script>
+        function myFunction() {
+            var x = 
+                document.getElementById("myText").value;
+            
+            document.getElementById(
+              "demo").innerHTML = x;
+        }
+    </script>
+  <script>
+    function myFunction2() {
+            var x = 
+                document.getElementById("myText2").value;
+            
+            document.getElementById(
+              "demo2").innerHTML = x;
+        }
+  </script>
+  <script>
+    function myFunction3() {
+            var x = 
+                document.getElementById("myText3").value;
+            
+            document.getElementById(
+              "demo3").innerHTML = x;
+        }
+  </script>
+  <script>
+    function myFunction4() {
+            var x = 
+                document.getElementById("myText4").value;
+            
+            document.getElementById(
+              "demo4").src = x;
+        }
+  </script>
+  <script>
+    function myFunction5() {
+            var x = 
+                document.getElementById("myText5").value;
+            
+            document.getElementById(
+              "demo5").src = x;
+        }
+  </script>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzGZOUw5GHDGK_q_EW8sEIf-l0JbUZOpZS9w__P1-73rqJkGj0/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+  </html>
