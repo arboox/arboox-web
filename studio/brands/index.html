@@ -101,6 +101,58 @@
       filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.08));
       border-radius: 12px;
     }
+
+    .preview {
+      width: 320px;
+      height: 230px;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.09));
+    }
+
+    input {
+      width: 200px;
+      height: 34px;
+      font-family: "Neurial Grotesk", system-ui;
+      background-color: #F0F0F0;
+      border: none;
+      padding: 4px;
+      border-radius: 10px;
+      transition: linear 100ms;
+      color: #888888;
+    }
+
+    input:focus {
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+      outline: none;
+      border: solid 1.4px #00000012;
+    }
+
+    button {
+      width: 68px;
+      height: 42px;
+      border-radius: 22px;
+      border: none;
+      background-color: #222222;
+      position: relative;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      cursor: pointer;
+      transition: linear 200ms;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+    }
+
+    .wrap {
+      width: 300px;
+    }
   </style>
   <body>
     <center>
@@ -125,20 +177,153 @@
       </div>
       <br />
       <br />
-      <h1 style="width: 320px;">
-        Apply to become an ARBOOX™ brand
+      <h1>
+        Set up brand profile
       </h1>
       <br />
       <p
         style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; width: 320px; margin-top: -20px;"
       >
-        Please fill the form below with your brand information to get access to ARBOOX™ Brand Studio
+        Fill the form below with your brand's info to preview and create your
+        brand profile.
       </p>
       <br />
       <br />
-      <iframe style="border: none; width: 80%; height: 500px; max-width: 600px; overflow-x: hidden; filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.08)); border-radius: 12px;" src="https://arboox.ca/brands#apply">
-        
-      </iframe>
+      <div class="wrap">
+        <br />
+        <div class="preview">
+          <div
+            class="preview-header-image"
+            style="width: 320px; height: 230px; border-radius: 12px 12px 0px 0px;"
+          >
+            <img
+              src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2FFrame%201.png?v=1624889127857"
+              id="demo4"
+              style="width: 100%; height: 100%; border-radius: 12px; z-index: -2; background-size: auto 100%; background-position: center; border: 0;"
+            />
+            <div
+              style="background: rgb(116,116,116);
+background: linear-gradient(180deg, rgba(116,116,116,0.4) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 40px; position: relative; top: -234px; border-radius: 12px 12px 0px 0px; z-index: 2;"
+            >
+              <span
+                class="material-icons-round"
+                style="position: relative; top: 6px; left: -140px; cursor: pointer; z-index: 100; color: #FFFFFF;"
+                >expand_more</span
+              >
+            </div>
+            <br />
+            <img
+              src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2Fprofile.svg?v=1622142917454"
+              id="demo"
+              style="font-size: 22px; position: relative; top: -206px; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); color: #FFFFFF; font-family: 'Neurial Grotesk', system-ui; width: 50px;"
+            />
+            <br />
+            <p
+              id="demo2"
+              style="margin-top: -200px; width: 200px; word-break: break-all; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); color: #FFFFFF; font-family: 'Neurial Grotesk', system-ui;"
+            >
+              Brand description
+            </p>
+            <br />
+            <p
+              id="demo3"
+              style="margin-top: -28px; width: 200px; word-break: break-all; font-size: 12px; color: #0094FF; cursor: pointer; z-index: 100; text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); font-family: 'Neurial Grotesk', system-ui;"
+            >
+              website.com
+            </p>
+          </div>
+          <br />
+        </div>
+        <br />
+        <br />
+        <br />
+        <form
+          name="submit-to-google-sheet"
+          action="https://script.google.com/macros/s/AKfycbxK4mWGOuBHD77IGzJkC2SQh6-77vRm6TngAOyc891dUpkMErUn/exec"
+        >
+          <p
+            style="text-align: left; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            Brand Logo URL <b style="color: #FF6868;">*</b>
+          </p>
+          <input type="text" id="myText" name="brand-logo" required />
+          &ensp;
+          <button type="button" onclick="myFunction()">
+            Set
+          </button>
+          <br />
+          <br />
+          <br />
+          <p
+            style="text-align: left; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            Brand description <b style="color: #FF6868;">*</b>
+          </p>
+          <input type="text" id="myText2" name="brand-description" required />
+          &ensp;
+          <button type="button" onclick="myFunction2()">
+            Set
+          </button>
+          <br />
+          <br />
+          <br />
+          <p
+            style="text-align: left; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            Website
+          </p>
+          <input type="text" id="myText3" name="website" />
+          &ensp;
+          <button type="button" onclick="myFunction3()">
+            Set
+          </button>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h3
+            style="text-align: left; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            Header
+          </h3>
+          <br />
+          <p
+            style="font-size: 14px; text-align: left; margin-top: -22px; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            A header image is required. It should be hosted somewhere else and
+            the recommended dimensions are 320 by 230 pixels.
+          </p>
+          <br />
+          <input type="text" id="myText4" name="header-url" />
+          &ensp;
+          <button type="button" onclick="myFunction4()">
+            Set
+          </button>
+          <br />
+          <br />
+          <br />
+          <p
+            style="text-align: left; font-family: 'Neurial Grotesk', system-ui;"
+          >
+            E-mail address <b style="color: #FF6868;">*</b>
+          </p>
+          <input style="width: 100%;" type="text" name="email" />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <button
+            style="width: 280px;"
+            type="submit"
+            onclick="window.location.href='https://arboox.ca/studio/brands/success';"
+          >
+            Create brand profile
+          </button>
+        </form>
+      </div>
       <br />
       <br />
       <br />
@@ -153,5 +338,52 @@
       <br />
       <br />
     </center>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myText").value;
+
+        document.getElementById("demo").src = x;
+      }
+    </script>
+    <script>
+      function myFunction2() {
+        var x = document.getElementById("myText2").value;
+
+        document.getElementById("demo2").innerHTML = x;
+      }
+    </script>
+    <script>
+      function myFunction3() {
+        var x = document.getElementById("myText3").value;
+
+        document.getElementById("demo3").innerHTML = x;
+      }
+    </script>
+    <script>
+      function myFunction4() {
+        var x = document.getElementById("myText4").value;
+
+        document.getElementById("demo4").src = x;
+      }
+    </script>
+    <script>
+      function myFunction5() {
+        var x = document.getElementById("myText5").value;
+
+        document.getElementById("demo5").src = x;
+      }
+    </script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbxK4mWGOuBHD77IGzJkC2SQh6-77vRm6TngAOyc891dUpkMErUn/exec';
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(response => console.log("Success!", response))
+          .catch(error => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
