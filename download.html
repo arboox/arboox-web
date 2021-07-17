@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARBOOX™</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fapp_icon_pwa.png?v=1624324949355===="
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://arboox.ca/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0;
+      background: rgb(0, 198, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 198, 255, 1) 0%,
+        rgba(0, 148, 255, 1) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      height: 100%;
+    }
+
+    .topbar {
+      width: 100%;
+      height: 44px;
+      background-color: #FFFFFF;
+      filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .floating {
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      margin-top: -20px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.5;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+      50% {
+        transform: translate(0, 15px);
+      }
+      100% {
+        transform: translate(0, -0px);
+      }
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0.5;
+      }
+    }
+
+    .download-bar {
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      position: -webkit-fixed;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      margin: 0;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      transition: linear 300ms;
+      filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
+          transition: transform 500ms cubic-bezier(0.02, 1.31, 0.87, 1.14) 0s;
+    }
+
+    .animated-gradient {
+      animation: animateBg 30s linear infinite;
+      background-image: linear-gradient(
+        30deg,
+        #00c6ff,
+        #0094ff,
+        #00c6ff,
+        #0094ff
+      );
+      background-size: 300% 100%;
+    }
+    @keyframes animateBg {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+
+    @media screen and (max-width: 780px) {
+      .remaining {
+        visibility: hidden;
+      }
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .appstoretag {
+      transition: linear 120ms;
+    }
+
+    .appstoretag:hover {
+      filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+    }
+    
+    .copyright {
+      font-family: "Neurial Grotesk", system-ui;
+      position: relative;
+      text-align: center;
+      font-weight: 600;
+      color: #00000066;
+    }
+  </style>
+  <body class="animated-gradient">
+    <div class="topbar">
+      <img
+        src="https://cdn.glitch.com/702773f6-09f4-4fc6-b7d6-303b28d605da%2Fapp-icon.png?v=1625754681686"
+        style="float: left; width: 24px; margin-top: 10px; margin-left: 14px; border-radius: 6px; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));"
+      />
+      &ensp;
+      <a
+        href="https://arboox.ca/forbusiness"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Adverts
+      </a>
+      &ensp;
+      <a
+        href="https://arboox.ca/anchors"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Anchors
+      </a>
+      &ensp;
+      <a
+        href="https://arboox.ca/about"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        About
+      </a>
+      &ensp;
+      <a
+        href="https://arboox.ca/brands"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Brands
+      </a>
+      &ensp;
+      <a
+        class="remaining"
+        href="https://arboox.ca/download"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Download
+      </a>
+      &ensp;
+      <a
+        class="remaining"
+        href="https://arboox.ca/newsroom"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Newsroom
+      </a>
+      &ensp;
+      <a
+        class="remaining"
+        href="https://arboox.ca/privacy"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Privacy
+      </a>
+      &ensp;
+      <a
+        class="remaining"
+        href="https://arboox.ca/store"
+        style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; float: left; margin-left: 20px; margin-top: 11px; color: #000000; text-decoration: none;"
+      >
+        Store
+      </a>
+    </div>
+    <br />
+    <br />
+    <center>
+      <div style="width: 80%; max-width: 500px;">
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; font-size: 40px; animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;"
+        >
+          It's time to download ARBOOX™.
+        </h1>
+        <br />
+        <p
+          style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; margin-top: -20px; font-size: 16px; animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;"
+        >
+          AB is the perfect app for all kinds of people. Wether you like to
+          read, watch or even play, ARBOOX™ has something exclusively made for
+          you, and what's best: it's free!
+        </p>
+        <br />
+        <br />
+        <br />
+        <text class="floating">
+          ↓ Scroll down to learn more ↓
+        </text>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div
+          style="width: 100%; height: 550px; background-color: #FFFFFF;  border-radius: 12px; min-width: 320px;"
+        >
+          <h1
+            class="gradient-h1"
+            style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; background: linear-gradient(to right, #00C6FF, #0094FF);
+  color: transparent;
+  -webkit-background-clip: text; position: relative; top: 20px;"
+          >
+            Stories
+          </h1>
+          <br />
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -8px; width: 260px;"
+          >
+            Read 1-to-5-minute insights about almost any topic, and learn
+            something new everyday.
+          </p>
+          <br />
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fstories-artboard-2.png?v=1626546794889"
+            style="width: 300px;"
+          />
+        </div>
+        <br />
+        <br />
+        <div
+          style="width: 100%; height: 440px; background-color: #FFFFFF;  border-radius: 12px; min-width: 320px;"
+        >
+          <h1
+            class="gradient-h1"
+            style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; background: linear-gradient(to right, #00C6FF, #0094FF);
+  color: transparent;
+  -webkit-background-clip: text; position: relative; top: 20px;"
+          >
+            AR Experiences
+          </h1>
+          <br />
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -8px; width: 260px;"
+          >
+            Dive right into immersive, 360° high-quality AR Experiences. New
+            ones are added every week.
+          </p>
+          <br />
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Far-preview-1.png?v=1623799407328"
+            style="width: 260px; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2)); margin-top: 20px;"
+          />
+        </div>
+        <br>
+        <br>
+                <div
+          style="width: 100%; height: 710px; background-color: #FFFFFF;  border-radius: 12px; min-width: 320px;"
+        >
+          <h1
+            class="gradient-h1"
+            style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; background: linear-gradient(to right, #00C6FF, #0094FF);
+  color: transparent;
+  -webkit-background-clip: text; position: relative; top: 20px;"
+          >
+            Videos
+          </h1>
+          <br />
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -8px; width: 260px;"
+          >
+           Enjoy a selection of ad-free videos from world-class publishers.
+          </p>
+          <br />
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FScreenshot_20210717-140315%20(1).png?v=1626548728601"
+            style="width: 260px; border-radius: 10px; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.06));"
+          />
+        </div>
+          <br />
+        <br />
+        <div
+          style="width: 100%; height: 540px; background-color: #FFFFFF;  border-radius: 12px; min-width: 320px;"
+        >
+          <h1
+            class="gradient-h1"
+            style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; background: linear-gradient(to right, #00C6FF, #0094FF);
+  color: transparent;
+  -webkit-background-clip: text; position: relative; top: 20px;"
+          >
+            Shopping
+          </h1>
+          <br />
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -8px; width: 260px;"
+          >
+            Follow your favourite brands and purchase their products in AR.
+          </p>
+          <br />
+          <video src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FVID_20210525_114417_2.mp4?v=1621963061421" style="width: 200px; border-radius: 10px;"></video>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div id="download" style="width: 100%; height: 380px; background-color: #FFFFFF;">
+        <br>
+        <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 30px;">
+        Try it today. <br> It's free, forever.
+        </h1>
+        <br>
+        <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -22px; text-align: left; margin-left: 30px; margin-right: 30px;"
+          >
+            ARBOOX™ is a free app made for everyone. It runs <br> on both iOS and Android, and it's super lightweight <br> (only 18MB).
+          </p>
+        <br>
+        <div style="display: inline-block; float: left; margin-left: 30px;">
+        <a href="https://arboox.ca/setup"
+          ><img
+            class="appstoretag"
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%20(1)%202.svg?v=1623801803144"
+            style="width: 136px;"/></a
+        >&emsp;<a href="https://play.google.com/store/apps/details?id=com.appleid.privaterelay.cbbpxf6xh8.arboox"
+          ><img
+            class="appstoretag"
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fdownload%202.svg?v=1623801806299"
+            style="width: 136px;"
+        /></a>
+      </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; margin-top: -22px; text-align: left; margin-left: 30px; margin-right: 30px; font-size: 12px;"
+          >
+            To get ARBOOX™ in your iPhone or iPad, you just need to add <b>arboox.ca/app</b> to your homescreen. Click the tag above for more guided steps.
+          </p>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <br>
+      <div style="width: 100%; height: 270px; background-color: #F8F9FA; margin-top: -20px;">
+        <br>
+        <div style="display: inline-block;">
+        <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 18px; font-weight: 500;"> 
+          Company
+        </p>
+          <br>
+          <a href="https://arboox.ca/about" style="font-family: 'Neurial Grotesk', system-ui; color: #00000066; text-decoration: none; font-size: 18px; position: relative; top: -20px;">About</a>
+           <br>
+          <a href="https://arboox.ca/privacy" style="font-family: 'Neurial Grotesk', system-ui; color: #00000066; text-decoration: none; font-size: 18px;">Privacy</a>
+        </div>
+        &emsp;
+        &emsp;
+         <div style="display: inline-block;">
+        <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 18px; font-weight: 500;"> 
+          Advertising
+        </p>
+          <br>
+          <a href="https://arboox.ca/forbusiness" style="font-family: 'Neurial Grotesk', system-ui; color: #00000066; text-decoration: none; font-size: 18px; position: relative; top: -20px;">ARBOOX™ Ads</a>
+           <br>
+          <a href="https://arboox.ca/forbusiness/inspiration" style="font-family: 'Neurial Grotesk', system-ui; color: #00000066; text-decoration: none; font-size: 18px;">Inspiration</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p class="copyright">
+        ©ARBOOX™ 2021
+      </p>
+      </div>
+      <div class="download-bar">
+        <a
+          href="#download"
+          class="animated-gradient"
+          style=" background: linear-gradient(to right, #00C6FF, #0094FF);
+  color: transparent;
+  -webkit-background-clip: text; font-family: 'Neurial Grotesk', system-ui; text-align: center; position: relative; display: flex; align-items: center; font-weight: 500; text-transform: uppercase; margin: 0;
+        right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto; display: block;"
+        >
+          Download
+        </a>
+      </div>
+      <br>
+      <br>
+    </center>
+  </body>
+</html>
