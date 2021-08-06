@@ -5,136 +5,258 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign Up - ARBOOX™</title>
-    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
-        <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
-            <link
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
   </head>
   <style>
-    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
-    
+    @font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff2?v=1625077483454') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff?v=1625077483357') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff2?v=1625077728919') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff?v=1625077728881') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff2?v=1625077881050') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff?v=1625077881509') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff2?v=1625077957435') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff?v=1625077957523') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff2?v=1622426113808') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff?v=1622426113395') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff2?v=1622426115945') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff?v=1622426114809') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff2?v=1622426118336') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff?v=1622426117209') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff2?v=1622426120692') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff?v=1622426119595') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
     body {
-      background-color: #FFFFFF;
-    } 
-    
-    h2 {
-      font-family: 'Neurial Grotesk', system-ui;
+      margin: 0px;
+    }
+
+    .ab-logo {
+      width: 32px;
+      margin-top: 22px;
+      border-radius: 8px;
+    }
+
+    .login-link {
+      font-family: "Neurial Grotesk", system-ui;
+      color: #222222;
+      font-weight: 500;
+      text-decoration: none;
       position: relative;
-      text-align: left;
-      padding-top: 22px;
+      bottom: -254px;
+    }
+
+    .blurbtn {
+      width: 80%;
+      max-width: 360px;
+      height: 38px;
+      background-color: #F6F6F6;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 200ms linear;
+      font-family: "Neurial Grotesk", system-ui;
+      font-weight: 500;
+      transition: linear 300ms;
+      margin-bottom: 15px;
+    }
+
+    .blurbtn:hover {
+      transform: scale(1.06);
+      background-color: #0094FF;
+      border-radius: 22px;
+      color: #FFFFFF;
+    }
+
+    a {
+      color: #0094FF;
+    }
+    
+    .material-icons-round {
+      color: #000000; 
+    }
+
+    .signup-modal {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      border: solid 1.3px #00000010;
+      width: 80%;
+      max-width: 600px;
+      height: 460px;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      overflow-x: hidden;
+      overflow-y: scroll;
     }
     
     input {
-      width: 300px;
-      height: 34px;
-      font-family: 'Neurial Grotesk', system-ui;
-      background-color: #F0F0F0;
+      width: 80%;
+      max-width: 360px;
+      float: left;
+      margin-left: 10%;
+      height: 36px;
+      border-radius: 8px;
       border: none;
-      padding: 4px;
-      border-radius: 10px;
+      background-color: #F6F6F6;
+      outline: none;
       transition: linear 100ms;
-      color: #888888;
-    }
-    
-    button {
-      width: 90px;
-      height: 34px;
-      border: none;
-      border-radius: 22px;
-      font-family: 'Avenir Next', Avenir, system-ui;
-      background-color: #0084FF;
-      color: #FFFFFF;
-      cursor: pointer;
+      font-family: 'Alliance No.2', system-ui;
+      font-feature-settings: 'ss01' on, 'ss02' on;
+      color: #CCCCCC;
     }
     
     input:focus {
-      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-      outline: none;
       border: solid 1.4px #00000012;
     }
-    
-        button {
-      width: 300px;
-      height: 42px;
-      border-radius: 22px;
-      border: none;
-      background-color: #222222;
-      position: relative;
-      font-family: 'Neurial Grotesk', system-ui;
-      color: #FFFFFF;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      cursor: pointer;
-      transition: linear 200ms;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #090C10;
+        color: #C9D1D9;
+      }
+      
+      .signup-modal {
+        background-color: #090C10;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 1.2px #FFFFFF50;
+      }
+      
+      .blurbtn {
+        background-color: #C9D1D930;
+        color: #0094FF;
+      }
+      
+      .material-icons-round {
+        color: #ADBAC7;
+      }
+      
+      input {
+        background-color: #0C0F14;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 0.6px #FFFFFF30;
+      }
+      
+      input:focus {
+      border: solid 1.4px #FFFFFF50;
     }
-    
-    button:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
-      box-shadow:
-    inset 0 0 80px #A4C3B2,
-    inset 20px 0 80px #FFFFFF,
-    inset -20px 0 80px #F0F0F0,
-    inset 20px 0 300px #A4C3B2,
-    inset -20px 0 300px #F0F0F0,
-    0 0 50px #FFFFFF,
-    -10px 0 80px #FFFFFF,
-    10px 0 20px #22222210;
     }
   </style>
   <body>
     <center>
-      <div style="width: 300px;">
-        <br>
-       <p style="position: relative; text-align: left; cursor: pointer;" onclick="window.location.href='https://arboox.ca/setup';">
-         <span class="material-icons-round">arrow_back</span>
-      </p>
-      <br>
-        <h2>
-          Welcome to ARBOOX™
-        </h2>
-        <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">Hello. Please complete the fields below to continue to the app.</p>
+      <div class="signup-modal">
         <br>
         <br>
-        <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec">
-          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; color: #ABABAB;">
-            Your e-mail or phone number
-          </p>
-  <input name="email" type="text" required>
-          <br>
-          <br>
-          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; color: #ABABAB;">
-            Pick a username
-          </p>
-  <input name="username" type="text" required>
-                    <br>
-          <br>
-          <p style="font-family: 'Neurial Grotesk', system-ui; font-size: 14px; position: relative; text-align: left; color: #ABABAB;">
-            Pick a password
-          </p>
-  <input name="password" type="password" required>
-          <br>
-          <br>
-          <br>
-          <br>
-  <button onclick="window.location.href='https://arboox.ca/setup/processing';" type="submit">Continue</button>
-</form> 
-              <br>
+        <a href="javascript:history.back();" style="text-align: left; float: left; margin-left: 10%; text-decoration: none;" class="material-icons-round">arrow_backward</a>
         <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB;">
-          By tapping the 'Continue' button above, you agree to our <a href="https://arboox.ca/privacy" target="_blank" style="color: #ABABAB;">Privacy Policy</a>.
+        <br>
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500;"
+        >
+          Sign up
+        </h1>
+        <br />
+        <br>
+        <form action="https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec" name="submit-to-google-sheet">
+        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
+          E-mail address
         </p>
         <br>
-      <br>
+        <input type="text" name="email" style="margin-top: -10px;" required>
+        <br />
+        <br />
+        <br />
+        <br>
+        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
+          Username
+        </p>
+        <br>
+        <input type="text" name="username" style="margin-top: -10px;" required>
+        <br />
+        <br />
+        <br />
+        <br>
+        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
+          Password
+        </p>
+        <br>
+        <input type="text" name="password" style="margin-top: -10px;" required>
+        <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button
+            class="blurbtn" type="submit" onclick="window.location.href='https://arboox.com/setup/processing';">
+            Sign up
+          </button>
+        </form>
+          <br />
+          <br />
+        <br />
       </div>
     </center>
-    <script>
+<script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec'
   const form = document.forms['submit-to-google-sheet']
 
@@ -145,10 +267,6 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
-    <script>
-       function redirect() {
-         window.location.href="https://arboox.github.io";
-       }
-     </script>
+
   </body>
 </html>
