@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delete Account - ARBOOX™</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <style>
+        @font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff2?v=1625077483454') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff?v=1625077483357') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff2?v=1625077728919') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff?v=1625077728881') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff2?v=1625077881050') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff?v=1625077881509') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff2?v=1625077957435') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff?v=1625077957523') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff2?v=1622426113808') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff?v=1622426113395') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff2?v=1622426115945') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff?v=1622426114809') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff2?v=1622426118336') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff?v=1622426117209') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neurial Grotesk';
+    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff2?v=1622426120692') format('woff2'),
+        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff?v=1622426119595') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+    
+    body {
+      margin: 0px;
+    }
+
+    .ab-logo {
+      width: 32px;
+      margin-top: 22px;
+      border-radius: 8px;
+    }
+
+    .login-link {
+      font-family: "Neurial Grotesk", system-ui;
+      color: #222222;
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+      bottom: -254px;
+    }
+
+    .blurbtn {
+      width: 100%;
+      max-width: 360px;
+      height: 38px;
+      background-color: #F6F6F6;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 200ms linear;
+      font-family: "Neurial Grotesk", system-ui;
+      font-weight: 500;
+    }
+
+    .blurbtn:hover {
+      transform: scale(1.06);
+      border-radius: 22px;
+      background-color: #FF3A44;
+      color: #FFFFFF;
+    }
+
+    a {
+      color: #0094FF;
+    }
+
+    .signup-modal {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      border: solid 1.3px #00000010;
+      width: 80%;
+      max-width: 600px;
+      height: 400px;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    
+    input {
+      width: 100%;
+      max-width: 360px;
+      height: 36px;
+      border-radius: 8px;
+      border: none;
+      background-color: #F6F6F6;
+      outline: none;
+      transition: linear 100ms;
+      font-family: 'Alliance No.2', system-ui;
+      font-feature-settings: 'ss01' on, 'ss02' on;
+      color: #CCCCCC;
+    }
+    
+    input:focus {
+      border: solid 1.4px #00000012;
+    }
+    
+    .checkbox {
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1.2px solid #CCCCCC;
+      width: 16px;
+      height: 16px;
+	display: inline-block;
+	position: relative;
+      transition: linear 100ms;
+      position: relative;
+      border-radius: 3px;
+      float: left;
+      cursor: pointer;
+    }
+    
+    .checkbox:checked {
+      background-color: #0094FF;
+      border: 2px solid #0094FF;
+       filter: box-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+    }
+    
+    .disclaimer {
+      color: #CCCCCC;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #090C10;
+        color: #C9D1D9;
+      }
+      
+      .signup-modal {
+        background-color: #090C10;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 1.2px #FFFFFF50;
+      }
+      
+      .blurbtn {
+        background-color: #C9D1D930;
+        color: #0094FF;
+      }
+      
+      input {
+        background-color: #0C0F14;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 0.6px #FFFFFF30;
+      }
+      
+      input:focus {
+      border: solid 1.4px #FFFFFF50;
+    }
+      
+      .disclaimer {
+        color: #ADBAC7;
+      }
+    }
+  </style>
+  <body>
+    <center>
+      <div class="signup-modal">
+        <br />
+        <img
+          src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fapp-icon.svg?v=1625246866247"
+          style="width: 30px; margin-top: 20px; border-radius: 6px;"
+        />
+        <br>
+        <h2 style="font-family: 'Neurial Grotesk', system-ui; width: 220px;">
+          Delete your ARBOOX account
+        </h2>
+        <br>
+        <p style="font-family: 'Neurial Grotesk', system-ui; margin-top: -24px; width: 260px;">
+          This action cannot be undone and all your posts will be unpublished.
+        </p>
+        <br>
+        <br>
+        <form action="https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec" name="submit-to-google-sheet">
+        <div style="width: 260px;">
+        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left;">
+          Username
+          </p>
+        <input type="text" name="username" required>
+          <br>
+          <br>
+          <br>
+          <input type="checkbox" class="checkbox" value="delete" required>
+          <br>
+          <p class="disclaimer" style="font-family: 'Neurial Grotesk', system-ui; text-align: left; position: relative; top: -30px; margin-left: 28px; font-size: 14px;">
+          By checking this box, you give ARBOOX the consent to delete your account.
+          </p>
+          <br>
+          <br>
+          <button class="blurbtn" type="submit" onclick="window.location.href='https://arboox.com/setup/delete/success';">
+            Delete my account
+          </button>
+          <br>
+          <br>
+          <br>
+        </div>
+        </form>
+        </div>
+        <br />
+        <br />
+      </div>
+      <br />
+      <br />
+      <br />
+    </center>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+  </body>
+</html>
