@@ -4,11 +4,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign Up - ARBOOX™</title>
-    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
+    <title>Setup - ARBOOX™</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-        <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
@@ -17,86 +20,115 @@
     body {
       margin: 0px;
     }
-    
-    .ab-text-logo {
-      width: 108px;
-      margin-top: 10px;
+
+    .ab-logo {
+      width: 32px;
+      margin-top: 22px;
+      border-radius: 8px;
     }
-    
-    .signupview {
-      width: 100%;
-      height: 99.9vh;
-      background-color: #FFFFFF;
-      background: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fsignup-hero.png?v=1622732538161');
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    
+
     .login-link {
-      font-family: 'Neurial Grotesk', system-ui;
+      font-family: "Neurial Grotesk", system-ui;
       color: #222222;
       font-weight: 500;
       text-decoration: none;
-      position: relative; 
+      position: relative;
       bottom: -254px;
     }
-    
-    h1 {
-      font-family: 'Neurial Grotesk', system-ui;
-      position: relative;
-      text-align: left;
-      width: 250px;
-      bottom: -240px;
-    }
-    
-    button {
-      width: 254px;
-      height: 42px;
-      border-radius: 22px;
+
+    .blurbtn {
+      width: 84%;
+      max-width: 360px;
+      height: 38px;
+      background-color: #F6F6F6;
       border: none;
-      background-color: #222222;
-      position: relative;
-      bottom: -240px;
-      font-family: 'Neurial Grotesk', system-ui;
-      color: #FFFFFF;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: linear 200ms;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+      transition: 200ms linear;
+      font-family: "Neurial Grotesk", system-ui;
+      font-weight: 500;
     }
-    
-    button:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
-      box-shadow:
-    inset 0 0 80px #0094FF,
-    inset 20px 0 80px #FFFFFF,
-    inset -20px 0 80px #F0F0F0,
-    inset 20px 0 300px #0094FF,
-    inset -20px 0 300px #F0F0F0,
-    0 0 50px #FFFFFF,
-    -10px 0 80px #FFFFFF,
-    10px 0 20px #22222210;
+
+    .blurbtn:hover {
+      transform: scale(1.06);
+    }
+
+    a {
+      color: #0094FF;
+    }
+
+    .signup-modal {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      border: solid 1.3px #00000010;
+      width: 80%;
+      max-width: 600px;
+      height: 320px;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #090C10;
+        color: #C9D1D9;
+      }
+      
+      .signup-modal {
+        background-color: #090C10;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 1.2px #FFFFFF50;
+      }
+      
+      .blurbtn {
+        background-color: #C9D1D930;
+        color: #0094FF;
+      }
     }
   </style>
   <body>
     <center>
-    <div class="signupview">
-    <img class="ab-text-logo" src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20Black.svg?v=1618838333051">
-      <br>
-      <h1>
-        Welcome to the new social
-      </h1>
-      <br>
-      <button onclick="window.location.href='https://arboox.ca/setup/signup';">
-        Sign Up
-      </button>
-      <br>
-      <a href="https://arboox.ca/setup/login" class="login-link">Log In</a>
-    </div>
+      <div class="signup-modal">
+        <br />
+        <img
+          src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fapp-icon.svg?v=1625246866247"
+          style="width: 30px; margin-top: 10px; border-radius: 6px;"
+        />
+        <br />
+        <br />
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; font-weight: 500; width: 200px;"
+        >
+          AR For Everyone
+        </h1>
+        <br />
+        <br />
+        <br />
+        <div style="margin-top: -36px;">
+          <button
+            class="blurbtn"
+            onclick="window.location.href='https://arboox.com/setup/signup';"
+          >
+            Sign up
+          </button>
+          <br />
+          <br />
+          <a
+            href="https://arboox.com/setup/signin"
+            style="font-family: 'Neurial Grotesk', system-ui; text-decoration: none; font-size: 14px; font-weight: 500;"
+            >Sign In</a
+          >
+        </div>
+        <br />
+        <br />
+      </div>
+      <br />
+      <br />
+
+      <br />
     </center>
   </body>
 </html>
