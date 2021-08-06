@@ -4,110 +4,112 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Setting up your account - ARBOOX™</title>
-    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
-        <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
-            <link
+    <meta http-equiv="refresh" content="8; url='https://arboox.com/setup/onboarding'">
+    <title>Setup - ARBOOX™</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
-    <meta http-equiv="refresh" content="5; URL='https://arboox.ca/setup/tutorial'" /> 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <style>
-    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
-    
     body {
-      background-color: #FFFFFF;
-    } 
-    
-    h2 {
-      font-family: 'Neurial Grotesk', system-ui;
-      position: relative;
-      text-align: left;
-      padding-top: 22px;
+      margin: 0px;
     }
-    
-    input {
-      width: 300px;
-      height: 34px;
-      font-family: 'Neurial Grotesk', system-ui;
-      background-color: #F0F0F0;
-      border: none;
-      padding: 4px;
-      border-radius: 10px;
-      transition: linear 100ms;
-      color: #888888;
+
+    .ab-logo {
+      width: 32px;
+      margin-top: 22px;
+      border-radius: 8px;
     }
-    
-    button {
-      width: 90px;
-      height: 34px;
-      border: none;
-      border-radius: 22px;
-      font-family: 'Avenir Next', Avenir, system-ui;
-      background-color: #0084FF;
-      color: #FFFFFF;
-      cursor: pointer;
-    }
-    
-    input:focus {
-      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-      outline: none;
-      border: solid 1.4px #00000012;
-    }
-    
-        button {
-      width: 300px;
-      height: 42px;
-      border-radius: 22px;
-      border: none;
-      background-color: #222222;
-      position: relative;
-      font-family: 'Neurial Grotesk', system-ui;
-      color: #FFFFFF;
+
+    .login-link {
+      font-family: "Neurial Grotesk", system-ui;
+      color: #222222;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      cursor: pointer;
-      transition: linear 200ms;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+      text-decoration: none;
+      position: relative;
+      bottom: -254px;
     }
-    
-    button:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
-      box-shadow:
-    inset 0 0 80px #A4C3B2,
-    inset 20px 0 80px #FFFFFF,
-    inset -20px 0 80px #F0F0F0,
-    inset 20px 0 300px #A4C3B2,
-    inset -20px 0 300px #F0F0F0,
-    0 0 50px #FFFFFF,
-    -10px 0 80px #FFFFFF,
-    10px 0 20px #22222210;
+
+    .blurbtn {
+      width: 84%;
+      max-width: 360px;
+      height: 38px;
+      background-color: #F6F6F6;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 200ms linear;
+      font-family: "Neurial Grotesk", system-ui;
+      font-weight: 500;
+    }
+
+    .blurbtn:hover {
+      transform: scale(1.06);
+    }
+
+    a {
+      color: #0094FF;
+    }
+
+    .signup-modal {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      border: solid 1.3px #00000010;
+      width: 80%;
+      max-width: 600px;
+      height: 320px;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #090C10;
+        color: #C9D1D9;
+      }
+      
+      .signup-modal {
+        background-color: #090C10;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
+        border: solid 1.2px #FFFFFF50;
+      }
+      
+      .blurbtn {
+        background-color: #C9D1D930;
+        color: #0094FF;
+      }
     }
   </style>
   <body>
     <center>
-      <div style="width: 300px;">
+      <div class="signup-modal">
+        <br />
         <br>
-       <p style="position: relative; text-align: left; cursor: pointer;" onclick="window.location.href='https://arboox.ca/setup/signup';">
-         <span class="material-icons-round">close</span>
-      </p>
-      <br>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <br>
 <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_MY6jZa.json"  background="transparent"  speed="0.5"  style="width: 160px; height: 160px;" loop autoplay></lottie-player>
         <br>
-        <h2>
-          We're setting everything up for you.
-        </h2>
-        <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">Soon, you'll be able to use ARBOOX™. This means you'll get access to lots of AR experiences, games, videos and more.</p>
-        <br>
-        <br>
-        <br>
+        <p style="font-family: 'Neurial Grotesk', system-ui;">
+          Setting everything up
+        </p>
+        </div>
+        <br />
+        <br />
       </div>
+      <br />
+      <br />
+
+      <br />
     </center>
   </body>
 </html>
