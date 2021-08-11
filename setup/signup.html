@@ -17,74 +17,6 @@
     />
   </head>
   <style>
-    @font-face {
-    font-family: 'Alliance No.2';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff2?v=1625077483454') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Light.woff?v=1625077483357') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Alliance No.2';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff2?v=1625077728919') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Medium.woff?v=1625077728881') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Alliance No.2';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff2?v=1625077881050') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Regular.woff?v=1625077881509') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Alliance No.2';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff2?v=1625077957435') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAllianceNo2-Bold.woff?v=1625077957523') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neurial Grotesk';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff2?v=1622426113808') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff?v=1622426113395') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Neurial Grotesk';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff2?v=1622426115945') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Light.woff?v=1622426114809') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Neurial Grotesk';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff2?v=1622426118336') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Medium.woff?v=1622426117209') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Neurial Grotesk';
-    src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff2?v=1622426120692') format('woff2'),
-        url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Regular.woff?v=1622426119595') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
     body {
       margin: 0px;
     }
@@ -95,79 +27,95 @@
       border-radius: 8px;
     }
 
-    .login-link {
-      font-family: "Neurial Grotesk", system-ui;
-      color: #222222;
-      font-weight: 500;
-      text-decoration: none;
-      position: relative;
-      bottom: -254px;
-    }
-
-    .blurbtn {
-      width: 80%;
-      max-width: 360px;
-      height: 38px;
-      background-color: #F6F6F6;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 200ms linear;
-      font-family: "Neurial Grotesk", system-ui;
-      font-weight: 500;
-      transition: linear 300ms;
-      margin-bottom: 15px;
-    }
-
-    .blurbtn:hover {
-      transform: scale(1.06);
-      background-color: #0094FF;
-      border-radius: 22px;
-      color: #FFFFFF;
-    }
-
-    a {
-      color: #0094FF;
-    }
-    
-    .material-icons-round {
-      color: #000000; 
-    }
-
-    .signup-modal {
-      background-color: #FFFFFF;
-      border-radius: 12px;
-      border: solid 1.3px #00000010;
-      width: 80%;
-      max-width: 600px;
-      height: 460px;
-      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
-    
     input {
-      width: 80%;
-      max-width: 360px;
-      float: left;
-      margin-left: 10%;
-      height: 36px;
+      width: 300px;
+      height: 42px;
       border-radius: 8px;
       border: none;
-      background-color: #F6F6F6;
+      background-color: #FFFFFF;
       outline: none;
-      transition: linear 100ms;
-      font-family: 'Alliance No.2', system-ui;
-      font-feature-settings: 'ss01' on, 'ss02' on;
+      transition: linear 50ms;
+      font-family: "Neurial Grotesk", system-ui;
+      color: #CCCCCC;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      padding-left: 10px;
+    }
+
+    input:focus {
+      border: solid 2.6px #0094FF80;
+    }
+
+    ::-webkit-input-placeholder {
       color: #CCCCCC;
     }
-    
-    input:focus {
-      border: solid 1.4px #00000012;
+
+    ::-moz-placeholder {
+      color: #CCCCCC;
+    }
+    :-ms-input-placeholder {
+      color: #CCCCCC;
+    }
+
+    .checkbox {
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1.2px solid #CCCCCC;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      position: relative;
+      transition: linear 100ms;
+      position: relative;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .checkbox:checked {
+      background-color: #0094FF50;
+      border: 2px solid #0094FF50;
+      filter: box-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+    }
+
+    .primary {
+      width: 260px;
+      height: 46px;
+      position: fixed;
+      position: -webkit-fixed;
+      bottom: 0;
+      margin: 0;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 25px;
+      border: none;
+      border-radius: 40px;
+      background-color: #0094FF;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+      font-family: "Neurial Grotesk", system-ui;
+      color: #FFFFFF;
+      font-weight: 500;
+      font-size: 18px;
+      transition: linear 100ms;
+      cursor: pointer;
+    }
+
+    .primary:hover {
+      background-color: #FFFFFF50;
+      border: solid 1.6px #0094FF;
+      color: #0094FF;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+
+    .material-icons-round {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .region {
+      background-color: #FFFFFF;
+      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
     }
 
     @media (prefers-color-scheme: dark) {
@@ -175,98 +123,191 @@
         background-color: #090C10;
         color: #C9D1D9;
       }
-      
-      .signup-modal {
-        background-color: #090C10;
-        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
-        border: solid 1.2px #FFFFFF50;
+
+      .region {
+        background-color: #0C0F14;
+        filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
       }
-      
-      .blurbtn {
-        background-color: #C9D1D930;
-        color: #0094FF;
+
+      input {
+        background-color: #0C0F14;
+        filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
       }
-      
+
+      .primary:hover {
+        background-color: #090C1050;
+      }
+
       .material-icons-round {
         color: #ADBAC7;
       }
-      
-      input {
-        background-color: #0C0F14;
-        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.4));
-        border: solid 0.6px #FFFFFF30;
-      }
-      
-      input:focus {
-      border: solid 1.4px #FFFFFF50;
-    }
     }
   </style>
   <body>
     <center>
-      <div class="signup-modal">
-        <br>
-        <br>
-        <a href="javascript:history.back();" style="text-align: left; float: left; margin-left: 10%; text-decoration: none;" class="material-icons-round">arrow_backward</a>
-        <br>
-        <br>
-        <h1
-          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500;"
+      <br />
+      <br />
+      <div style="width: 300px;">
+        <a
+          href="javascript:history.back()"
+          class="material-icons-round"
+          style="float: left;"
+          >arrow_back</a
         >
-          Sign up
-        </h1>
-        <br />
-        <br>
-        <form action="https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec" name="submit-to-google-sheet">
-        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
-          E-mail address
-        </p>
-        <br>
-        <input type="text" name="email" style="margin-top: -10px;" required>
-        <br />
-        <br />
-        <br />
-        <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
-          Username
-        </p>
-        <br>
-        <input type="text" name="username" style="margin-top: -10px;" required>
-        <br />
-        <br />
-        <br />
-        <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%;">
-          Password
-        </p>
-        <br>
-        <input type="text" name="password" style="margin-top: -10px;" required>
-        <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <button
-            class="blurbtn" type="submit" onclick="window.location.href='https://arboox.com/setup/processing';">
-            Sign up
-          </button>
-        </form>
-          <br />
-          <br />
-        <br />
       </div>
+      <br />
+      <br />
+      <br />
+      <h1 style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500;">
+        Sign up
+      </h1>
+      <br />
+      <p
+        style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; width: 280px; margin-top: -14px;"
+      >
+        An ARBOOX account gives you access to all of our services.
+      </p>
+      <br />
+      <br />
+      <div style="width: 300px; margin: 0;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;">
+      <form
+        action="https://script.google.com/macros/s/AKfycby5pSlLLjiG9o1nREyIwrtVgLw0rND3Yr8rvVjjhd0kc_eTyNhkxX0UDb3WeKR8nOll/exec" name="submit-to-google-sheet">
+        <p
+          style="text-align: left; font-family: 'Neurial Grotesk', system-ui; color: #0094FF; font-weight: 500; text-transform: uppercase; font-size: 14px;"
+        >
+          Region
+        </p>
+        <br />
+        <div
+          class="region"
+          style="width: 300px; height: 42px; border-radius: 8px; display: inline-block;"
+        >
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FMexico.svg?v=1628623533756"
+            style="width: 30px; float: left; position: relative; top: 10px; left: 10px; border-radius: 2px;"
+          />
+          &ensp;
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; text-align: left; display: inline-block; margin-top: 10px; float: left; position: relative; left: 20px;"
+          >
+            Mexico (+52)
+          </p>
+          &ensp;
+          <input
+            type="radio"
+            name="country-code"
+            class="checkbox"
+            style="float: right; margin-top: 12px; margin-right: 10px;"
+            value="Mexico (+52)"
+            required
+          />
+        </div>
+        <br />
+        <br />
+        <div
+          class="region"
+          style="width: 300px; height: 42px; border-radius: 8px; display: inline-block;"
+        >
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FAustralia.svg?v=1628644650372"
+            style="width: 30px; float: left; position: relative; top: 10px; left: 10px; border-radius: 2px;"
+          />
+          &ensp;
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; text-align: left; display: inline-block; margin-top: 10px; float: left; position: relative; left: 20px;"
+          >
+            Australia (+61)
+          </p>
+          &ensp;
+          <input
+            type="radio"
+            name="country-code"
+            class="checkbox"
+            style="float: right; margin-top: 12px; margin-right: 10px;"
+            value="Australia (+61)"
+            required
+          />
+        </div>
+        <br />
+        <br />
+        <div
+          class="region"
+          style="width: 300px; height: 42px; border-radius: 8px; display: inline-block;"
+        >
+          <img
+            src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FCanada.svg?v=1628645083116"
+            style="width: 30px; float: left; position: relative; top: 10px; left: 10px; border-radius: 2px;"
+          />
+          &ensp;
+          <p
+            style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; text-align: left; display: inline-block; margin-top: 10px; float: left; position: relative; left: 20px;"
+          >
+            Canada (+1)
+          </p>
+          &ensp;
+          <input
+            type="radio"
+            name="country-code"
+            class="checkbox"
+            style="float: right; margin-top: 12px; margin-right: 10px;"
+            value="Canada (+1)"
+            required
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+        <p
+          style="text-align: left; font-family: 'Neurial Grotesk', system-ui; color: #0094FF; font-weight: 500; text-transform: uppercase; font-size: 14px;"
+        >
+          Phone number or e-mail
+        </p>
+        <br />
+        <input
+          type="text"
+          name="phone-email"
+          placeholder="234 567 8901 / you@arboox.com"
+        />
+        <br />
+        <br />
+        <br />
+        <p
+          style="text-align: left; font-family: 'Neurial Grotesk', system-ui; color: #0094FF; font-weight: 500; text-transform: uppercase; font-size: 14px;"
+        >
+          Username & password
+        </p>
+        <br />
+        <input type="text" name="username" placeholder="@catlover32" />
+        <br />
+        <br />
+        <input type="text" name="password" placeholder="Strong password" />
+        <br />
+        <br />
+        <br />
+        <button type="submit" class="primary" onclick="window.location.href='https://arboox.com/setup/buffering';">
+          Continue
+        </button>
+      </form>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
     </center>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbx-N6ovJC7DBBopBk5mETmmZs_tfIma1Yx9r1aYrVEnRdBX_Ho/exec'
-  const form = document.forms['submit-to-google-sheet']
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycby5pSlLLjiG9o1nREyIwrtVgLw0rND3Yr8rvVjjhd0kc_eTyNhkxX0UDb3WeKR8nOll/exec';
+      const form = document.forms["submit-to-google-sheet"];
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(response => console.log("Success!", response))
+          .catch(error => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
