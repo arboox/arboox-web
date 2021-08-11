@@ -17,60 +17,64 @@
     />
   </head>
   <style>
+    html {
+      height: 100%;
+    }
+    
     body {
       margin: 0px;
+      background: rgb(0,198,255);
+background: linear-gradient(180deg, rgba(0,198,255,1) 0%, rgba(0,148,255,1) 100%);
     }
 
-    .ab-logo {
-      width: 32px;
-      margin-top: 22px;
-      border-radius: 8px;
-    }
-
-    .login-link {
-      font-family: "Neurial Grotesk", system-ui;
-      color: #222222;
-      font-weight: 500;
-      text-decoration: none;
-      position: relative;
-      bottom: -254px;
-    }
-
-    .blurbtn {
-      width: 84%;
-      max-width: 360px;
+    .primary {
+      width: 100px;
       height: 38px;
-      background-color: #F6F6F6;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 200ms linear;
-      font-family: "Neurial Grotesk", system-ui;
-      font-weight: 500;
-    }
-
-    .blurbtn:hover {
-      transform: scale(1.06);
-    }
-
-    a {
-      color: #0094FF;
-    }
-
-    .signup-modal {
       background-color: #FFFFFF;
-      border-radius: 12px;
-      border: solid 1.3px #00000010;
-      width: 80%;
-      max-width: 600px;
-      height: 320px;
-      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      border-radius: 40px;
+      color: #0094FF;
+      font-family: 'Neurial Grotesk', system-ui;
+      font-weight: 500;
+      font-size: 15px !important;
+      transition: linear 100ms;
+      cursor: pointer;
     }
-
+    
+    .primary:hover {
+      background-color: transparent;
+      border: solid 1.6px #FFFFFF;
+      color: #FFFFFF;
+    }
+    
+    .secondary {
+      background-color: transparent;
+      border: solid 1.6px #FFFFFF;
+      color: #FFFFFF;
+       width: 100px;
+      height: 38px;
+      font-family: 'Neurial Grotesk', system-ui;
+      font-weight: 500;
+      font-size: 15px !important;
+      transition: linear 100ms;
+      cursor: pointer;
+      border-radius: 40px;
+    }
+    
+    .secondary:hover {
+       width: 100px;
+      height: 38px;
+      border: none;
+      background-color: #FFFFFF;
+      border-radius: 40px;
+      color: #0094FF;
+      font-family: 'Neurial Grotesk', system-ui;
+      font-weight: 500;
+      font-size: 15px !important;
+      transition: linear 100ms;
+      cursor: pointer;
+    }
+    
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #090C10;
@@ -91,43 +95,22 @@
   </style>
   <body>
     <center>
-      <div class="signup-modal">
-        <br />
-        <img
-          src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fapp-icon.svg?v=1625246866247"
-          style="width: 30px; margin-top: 10px; border-radius: 6px;"
-        />
-        <br />
-        <br />
-        <h1
-          style="font-family: 'Neurial Grotesk', system-ui; text-transform: uppercase; font-weight: 500; width: 200px;"
-        >
-          AR For Everyone
-        </h1>
-        <br />
-        <br />
-        <br />
-        <div style="margin-top: -36px;">
-          <button
-            class="blurbtn"
-            onclick="window.location.href='https://arboox.com/setup/signup';"
-          >
-            Sign up
-          </button>
-          <br />
-          <br />
-          <a
-            href="https://arboox.com/setup/signin"
-            style="font-family: 'Neurial Grotesk', system-ui; text-decoration: none; font-size: 14px; font-weight: 500;"
-            >Sign In</a
-          >
-        </div>
-        <br />
-        <br />
+      <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FText%20Logo%20White.svg?v=1618838333023" style="width: 130px; float: left; margin-left: 26px; margin-top: 22px;">
+      <br />
+      <br>
+      <div style="position: relative; bottom: -58vh;">
+      <h1 style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; text-align: left; margin-left: 26px; position: relative;">
+        The new way to <br> social.
+      </h1>
+      <br>
+      <button onclick="window.location.href='https://arboox.com/setup/signup';" class="primary" style="float: left; margin-left: 26px; position: relative;">
+        Sign Up
+      </button>
+        &ensp;
+        <button onclick="window.location.href='https://arboox.com/setup/login';" class="secondary" style="float: left; margin-left: 26px; position: relative;">
+        Log In
+      </button>
       </div>
-      <br />
-      <br />
-
       <br />
     </center>
   </body>
