@@ -107,6 +107,14 @@
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
     }
+    
+    .primary:disabled {
+      background-color: #FFFFFF50;
+      border: solid 1.6px #0094FF;
+      color: #0094FF;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
 
     .material-icons-round {
       color: #000000;
@@ -271,6 +279,7 @@
           type="text"
           name="phone-email"
           placeholder="234 567 8901 / you@arboox.com"
+               required
         />
         <br />
         <br />
@@ -281,14 +290,14 @@
           Username & password
         </p>
         <br />
-        <input type="text" name="username" placeholder="@catlover32" />
+        <input type="text" name="username" placeholder="@catlover32" required/>
         <br />
         <br />
-        <input type="text" name="password" placeholder="Strong password" />
+        <input type="text" name="password" placeholder="Strong password" required/>
         <br />
         <br />
         <br />
-        <button type="submit" class="primary" onclick="window.location.href='https://arboox.com/setup/buffering';">
+        <button type="submit" id="btn" class="primary" onclick="window.location.href='https://arboox.com/setup/onboarding';">
           Continue
         </button>
       </form>
