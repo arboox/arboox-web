@@ -1,5 +1,3 @@
-@import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
-
 @font-face {
     font-family: 'Neurial Grotesk';
     src: url('https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FNeurialGrotesk-Bold.woff2?v=1622426113808') format('woff2'),
@@ -124,4 +122,8 @@
     -o-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+::selection {
+  background-color: #0094FF50;
 }
