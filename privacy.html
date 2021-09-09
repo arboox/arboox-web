@@ -1,154 +1,538 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy - ARBOOX™</title>
-    <link rel="shortcut icon" href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FARBOOX%20LOGO.png?v=1610393886910" />
-        <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fapp-icon.svg?v=1625246866247"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://arboox.com/style.css" />
     <script src="/script.js" defer></script>
-            <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script
+      defer
+      data-domain="arboox.com"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arboox.com/privacy" />
+    <meta
+      property="og:title"
+      content="Privacy - ARBOOX™"
+    />
+    <meta
+      property="og:description"
+      content="Privacy is a human right. At ARBOOX, it is one of our top priorities. What you view in our app, what you share, and who you share it with is up to you."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2017.png?v=1631195954582"
+    />
   </head>
   <style>
-    @import url("https://snapnet-cdn.storage.googleapis.com/fonts/avenir-next/avenirnext.font.css");
-    
     body {
+      margin: 0px;
       background-color: #FFFFFF;
-    } 
-    
-    h2 {
-      font-family: 'Neurial Grotesk', system-ui;
+    }
+
+    .topbar {
+      width: 100%;
+      height: 60px;
+      background-color: #FFFFFF;
+      filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .topbar {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF95;
+      }
+
+      .sheet {
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        background-color: #FFFFFF95;
+      }
+    }
+
+    .arboox__logo {
+      width: 100px;
+      margin-top: 12px;
       position: relative;
-      text-align: left;
+      pointer-events: none;
+      margin-left: 20px;
     }
-    
-    h3 {
-      font-family: 'Neurial Grotesk', system-ui;
-      position: relative;
-      text-align: left;
-    }
-    
-    input {
-      width: 300px;
-      height: 34px;
-      font-family: 'Neurial Grotesk', system-ui;
-      background-color: #F0F0F0;
-      border: none;
-      padding: 4px;
-      border-radius: 10px;
-      transition: linear 100ms;
-      color: #888888;
-    }
-    
-    button {
-      width: 90px;
-      height: 34px;
-      border: none;
+
+    .topbar_button {
+      background-color: #000000;
       border-radius: 22px;
-      font-family: 'Avenir Next', Avenir, system-ui;
-      background-color: #0084FF;
-      color: #FFFFFF;
-      cursor: pointer;
+      border: none;
+      height: 26px;
+      margin-bottom: 2px;
     }
-    
-    input:focus {
-      filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-      outline: none;
-      border: solid 1.4px #00000012;
+
+    .copyright {
+      font-family: "Neurial Grotesk", system-ui;
+      position: relative;
+      text-align: center;
+      font-weight: 600;
+      color: #CCCCCC;
     }
-    
-        button {
-      width: 300px;
+
+    .footer {
+      width: 340px;
+      max-width: 100%;
+      text-align: left;
+      position: relative;
+    }
+
+    video {
+      border-radius: 16px;
+    }
+
+    .signup-launchlink {
+      width: 254px;
       height: 42px;
       border-radius: 22px;
       border: none;
-      background-color: #222222;
+      background-color: #00B3FF;
       position: relative;
-      font-family: 'Neurial Grotesk', system-ui;
+      font-family: "Neurial Grotesk", system-ui;
       color: #FFFFFF;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.6px;
       cursor: pointer;
       transition: linear 200ms;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.20));
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+      z-index: 8;
+    }
+
+    .signup-launchlink:hover {
+      transform: scale(1.04);
+    }
+
+    .appstoretag {
+      transition: linear 120ms;
+      height: 36px;
+      cursor: pointer;
+    }
+
+    .appstoretag:hover {
+      filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+    }
+
+    .menu {
+      cursor: pointer;
+      transition: linear 160ms;
+      pointer-events: all;
+    }
+
+    .menu:hover {
+      filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+      transform: scale(1.08);
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 450px;
+      height: 90vh;
+      background-color: #FFFFFF95;
+      position: fixed;
+      position: -webkit-fixed;
+      bottom: 0;
+      filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.2));
+      z-index: 100;
+      display: none;
+      right: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .animate-reveal {
+      opacity: 0;
+      -webkit-animation: reveal 0.4s cubic-bezier(0, 1, 0.5, 1) 1 normal
+        forwards;
+      -moz-animation: reveal 0.4s ease-in 1 normal forwards;
+      -o-animation: reveal 0.4s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+      animation: reveal 0.4s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    }
+
+    .h1-hover-effect {
+      color: #000000;
+      transition: linear 100ms;
+    }
+
+    .h1-hover-effect:hover {
+      color: #CCCCCC;
     }
     
-    button:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
-      box-shadow:
-    inset 0 0 80px #0094FF,
-    inset 20px 0 80px #FFFFFF,
-    inset -20px 0 80px #F0F0F0,
-    inset 20px 0 300px #0094FF,
-    inset -20px 0 300px #F0F0F0,
-    0 0 50px #FFFFFF,
-    -10px 0 80px #FFFFFF,
-    10px 0 20px #22222210;
+    svg {
+      transition: linear 100ms;
+    }
+    
+    svg:hover {
+      fill: #CCCCCC;
+    }
+    
+    .h1 {
+      font-size: 60px;
+      color: #0C0F14;
+    }
+    
+    .privacy-card {
+      background-color: #F8F9FA;
+    }
+    
+    .text-that-changes {
+      color: default;
+    }
+    
+    .feature-card-art {
+      display: inline-block;
+    }
+    
+    @media only screen and (max-width: 450px) {
+      .h1 {
+        font-size: 34px;
+      }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #0C0F14;
+      }
+      
+      .h1 {
+        color: #CCCCCC;
+      }
+      
+      .topbar {
+        background-color: #0C0F1495;
+      }
+      
+      .menu {
+        filter: invert(100%);
+      }
+      
+      .sheet {
+        background-color: #0C0F1495;
+      }
+      
+      .h1-hover-effect, .material-icons-round, .menu-heading {
+        filter: invert(100%);
+      }
+      
+      .privacy-card {
+        background-color: #141820; 
+      }
+      
+      .text-that-changes {
+        color: #FFFFFF;
+      }
     }
   </style>
   <body>
+    <div class="topbar">
+      <img
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Ftext-logo-blue.svg?v=1626736430213"
+        style="float: left; width: 118px; margin-top: 14px; margin-left: 30px; border-radius: 6px;"
+      />
+      &ensp;
+      <button
+        class="signup-launchlink"
+        style="width: 90px; height: 28px; float: right; margin-top: 16px; margin-right: 60px;"
+        onclick="window.location.href='https://arboox.com/setup';"
+      >
+        Sign up
+      </button>
+      &ensp;
+      <img
+        class="menu"
+        onclick="menuShow()"
+        src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2Fmenu.svg?v=1627665748876"
+        style="float: right; margin-top: 17px; margin-right: 40px; position: relative; left: 170px;"
+      />
+    </div>
+    <br />
+    <br />
     <center>
-      <div style="width: 300px;">
+      <div style="width: 80%;">
+      <h1
+        style="font-family: 'Neurial Grotesk', system-ui; font-size: 36px; font-weight: 500; width: 360px; text-align: left; float: left;"
+      >
+        <i class="bi bi-lock-fill" style="background: -webkit-linear-gradient(#00C6FF, #0094FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"></i>
+      </h1>
         <br>
-       <p style="position: relative; text-align: left;">
-         <span class="material-icons-round">lock</span>
-      </p>
-      <br>
-        <h2>
-          Privacy Policy
-        </h2>
+        <div style="clear: both;"></div>
+      <h1
+        style="font-family: 'Neurial Grotesk', system-ui; font-size: 37px; font-weight: 500;   text-align: left; float: left; background: -webkit-linear-gradient(#00C6FF, #0094FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"
+      >
+        It's your device. It's your choice. It's your ARBOOX.
+      </h1>
         <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">At ARBOOX™, we care about people's safety and the protection of their data. In this privacy policy, we'll explain you what we do and what we don't do with the data you provided when you signed up. If your questions were not solved with our privacy policy, you can always contact our support team via <a href="mailto:arbooxapp@gmail.com" style="color: #ABABAB;">e-mail</a>. We're active from Monday to Friday from 8 AM to 12 PM CST (Central Standard Time).</p>
-        <br>
-        <br>
-        <h3>
-          Article 1. How we manage your data.
-        </h3>
-        <br>
-                <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">When you sign up, you are asked to provide an e-mail address, a username and a password. We store the information provided in a secure, private database that only ARBOOX™ employees can access. Your ARBOOX™ Account is not public, so you don't face any risks like receivng hate or suggestive comments, or being 'hacked'.</p>
-        <br>
-        <br>
-        <h3>
-          Article 2. What we do with your data.
-        </h3>
-        <br>
-                <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">Although not everyone can create a public profile in ARBOOX™, people are still required to sign up. This helps us to mantain a constant count of our users, and also to prevent bots from joining the platform. It's important for you to know that we don't sell your data to anyone in this planet or in other galaxies, since our two main sources of income are collaborations with brands and advertisements, not the selling of your e-mail address.</p>
-        <br>
-        <br>
-        <h3>
-          Article 3. What we don't do with your data.
-        </h3>
-        <br>
-                <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">As mentioned before, we don't sell your data. We don't send you e-mails unless they're important (new logins, sign up confirmation). We don't follow you around internet because, again, we don't really want to make money out of e-mail addresses, that's weird, and wrong. In case you signed up with a phone number, you won't receive SMS messages from us, never. </p>
-        <br>
-        <br>
-        <h3>
-          Article 4. How your data is used in ARBOOX™ Stores, Galleries and In-place AR Experiences.
-        </h3>
-        <br>
-                <p style="font-family: 'Neurial Grotesk', system-ui; position: relative; text-align: left; color: #ABABAB; margin-top: -24px;">When you make a purchase at an ARBOOX™ Store, you enter to an AB Gallery, or you scan an In-place AR Experience code, we will track the interaction. However, you're only asked to provide your ARBOOX™ username when completing a purchase at our official stores.</p>
-        <br>
-        <br>
-         <h3>
-          This privacy policy was last updated on Wednesday, 30 June 2021. If you agree with the points stated in this policy, you can tap the button below to create an account. You can also close this window.
-        </h3>
-        <br>
-        <br>
-  <button onclick="window.location.href='https://arboox.ca/setup/signup';">Sign Up</button>
-        <br>
-        <br>
-        <p style="font-family: 'Neurial Grotesk', system-ui; color: #ABABAB;">
-          Have a question? Need help? <a href="mailto:arbooxapp@gmail.com" style="color: #ABABAB;">Contact our support team.</a>
+        <div style="clear: both;"></div>
+        <p style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; text-align: left; float: left; font-size: 22px;">
+          Privacy is a human right. At ARBOOX, it is one of our top priorities. What you view in our app, what you share, and who you share it with is up to you.
         </p>
         <br>
-      <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden;
+    min-height: 100px; background: -webkit-linear-gradient(#00C6FF, #0094FF); margin-top: 60px; border-radius: 26px;">
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 8%;">
+            We don't. It's not necessary. 
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #FFFFFF; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 8%;">
+            What's the point on tracking users? How could your data work for us? It's just something unnecessary. Tracking users and creating profiles based on their activity sounds like other app, not like ARBOOX. Privacy is built inside every product we create, ensuring your security and data protection.
+          </p>
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <br>
+        <h1 style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; margin-top: 60px; margin-bottom: 60px;" class="h1">
+          Protected forever, anywhere.
+        </h1>
+        <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden; min-height: 100px; border-radius: 26px; margin-top: 10px;" class="privacy-card">
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: left; float: left; margin-left: 8%; margin-top: 8%; text-transform: uppercase; font-weight: 500;">
+            ARBOOX Account
+          </p>
+          <br>
+          <div style="clear: both;"></div>
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 20px;" class="text-that-changes">
+           Unhackable, unstoppable.
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 4%;" class="text-that-changes">
+            When you create an ARBOOX account, we only ask you to provide an e-mail address, a username, and a password. If someone ever gets to know your login credentials, tell them they just found another way to do nothing. Because accounts are just the way in which we measure how many people use ARBOOX, they're basically unusable when it comes to stealing your personal data. In fact, you don't need an account to use our app. Signing up is a voluntary action. 
+          </p>
+          <br>
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2013.png?v=1631152279784" class="feature-card-art" style="width: 100%; position: relative; top: 10px;">
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden; min-height: 100px; border-radius: 26px; margin-top: 26px;" class="privacy-card">
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: left; float: left; margin-left: 8%; margin-top: 8%; text-transform: uppercase; font-weight: 500;">
+            Anchor map
+          </p>
+          <br>
+          <div style="clear: both;"></div>
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 20px;" class="text-that-changes">
+           The anchor map does not remember what you've visited.
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 4%;" class="text-that-changes">
+            The ARBOOX Map is built to show you anchors available and how to get to them. However, there isn't a link established between the map, your device, and the anchors themselves, so it's virtually impossible to remember if you were in Sydney yesterday.
+          </p>
+          <br>
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2014.png?v=1631153262682" class="feature-card-art" style="width: 100%; position: relative; top: 10px;">
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden; min-height: 100px; border-radius: 26px; margin-top: 26px;" class="privacy-card">
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: left; float: left; margin-left: 8%; margin-top: 8%; text-transform: uppercase; font-weight: 500;">
+            Sponsored content
+          </p>
+          <br>
+          <div style="clear: both;"></div>
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 20px;" class="text-that-changes">
+           You get to see the same adverts as your grandpa.
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 4%;" class="text-that-changes">
+            Since ARBOOX does not collect your data, we cannot create profiles associated with you. That's why all of our users see the same advertisements at the same time. No tracking, no following. Just like ads in Times Square.
+          </p>
+          <br>
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2015.png?v=1631153880908" class="feature-card-art" style="width: 100%; position: relative; top: 10px;">
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden; min-height: 100px; border-radius: 26px; margin-top: 26px;" class="privacy-card">
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: left; float: left; margin-left: 8%; margin-top: 8%; text-transform: uppercase; font-weight: 500;">
+            Experience sharing
+          </p>
+          <br>
+          <div style="clear: both;"></div>
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 20px;" class="text-that-changes">
+           Your friends are yours. Not ours.
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 4%;" class="text-that-changes">
+            When you share an AR experience with your friends, ARBOOX does not link app visitors with app users. This means no matter what, we can't know who your friends are, where they live, etcetera.
+          </p>
+          <br>
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2016.png?v=1631154982671" class="feature-card-art" style="width: 100%; position: relative; top: 10px;">
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <div style="width: 100%; height: auto; overflow: hidden; min-height: 100px; border-radius: 26px; margin-top: 26px;" class="privacy-card">
+          <p style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; text-align: left; float: left; margin-left: 8%; margin-top: 8%; text-transform: uppercase; font-weight: 500;">
+            ARBOOX Studio
+          </p>
+          <br>
+          <div style="clear: both;"></div>
+          <h1 style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; font-weight: 500; margin-left: 8%; margin-right: 8%; margin-top: 20px;" class="text-that-changes">
+            Unlisted experiences are fully private.
+          </h1>
+          <br>
+          <div style="clear: both;"></div>
+          <p style="font-family: 'Neurial Grotesk', system-ui; text-align: left; float: left; margin-left: 8%; margin-top: 6px; margin-right: 8%; padding-bottom: 4%;" class="text-that-changes">
+            When you create a project in ARBOOX Studio, you can publish it to the app or create an unlisted experience. Unlisted experiences can only be opened by people who you share the link to.
+          </p>
+          <br>
+          <img src="https://cdn.glitch.com/a9c4e687-7c99-4065-88c1-02e69edfd394%2FFrame%2017.png?v=1631190009274" class="feature-card-art" style="width: 100%; position: relative; top: 10px;">
+        </div>
+        <br>
+        <div style="clear: both;"></div>
+        <br>
+        <h1 style="font-family: 'Neurial Grotesk', system-ui; font-weight: 500; margin-top: 60px; margin-bottom: 60px;" class="h1">
+          Learn more about your privacy at ARBOOX.
+        </h1>
+        <br>
+        <div style="clear: both;"></div>
+        <p style="font-family: 'Neurial Grotesk', system-ui; color: #CCCCCC; font-size: 20px; margin-top: -54px; width: 80%;">
+          Discover how we manage our databases and the actions we take to ensure your protection.
+        </p>
+        <br>
+        <div style="clear: both;"></div>
+        <a href="mailto:arbooxapp@gmail.com?Subject=Privacy" style="font-family: 'Neurial Grotesk', system-ui; color: #0094FF; position: relative; top: -6px; text-decoration: none;">Contact us&ensp;<i class="bi bi-chat-quote"></i></a>
+        <br>
+        <div style="clear: both;"></div>
+        <p class="copyright" style="padding-top: 36px; padding-bottom: 30px;">
+          ©ARBOOX™ 2021
+        </p>
       </div>
+      <div class="sheet animate-reveal" id="sheet">
+        <div class="bar" id="sheet-bar">
+          <span
+            class="material-icons-round"
+            style="font-size: 28px; margin-top: 20px; float: right; margin-right: 20px; cursor: pointer"
+            >close</span
+          >
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500; text-transform: uppercase;" class="menu-heading"
+        >
+          Menu
+        </h3>
+        <br />
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500; margin-top: -10px; cursor: pointer"
+          onclick="window.location.href='https://arboox.com/features';"
+          class="h1-hover-effect"
+        >
+          Features
+        </h1>
+        <br />
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500; margin-top: -10px; cursor: pointer"
+          onclick="window.location.href='https://arboox.com/anchors';"
+          class="h1-hover-effect"
+        >
+          Anchors
+        </h1>
+        <br />
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500; margin-top: -10px; cursor: pointer"
+          onclick="window.location.href='https://arboox.com/brands';"
+          class="h1-hover-effect"
+        >
+          Brands
+        </h1>
+        <br />
+        <h1
+          style="font-family: 'Neurial Grotesk', system-ui; text-align: left; margin-left: 10%; font-weight: 500; margin-top: -10px; cursor: pointer"
+          onclick="window.location.href='https://store.arboox.com/';"
+          class="h1-hover-effect"
+        >
+          Store
+        </h1>
+        <br>
+        <br>
+        <div style="float: left; margin-left: 10%; width: 320px;">
+          <a class="h1-hover-effect" style="text-decoration: none; float: left; font-family: 'Neurial Grotesk', system-ui; font-weight: 500;" href="https://about.arboox.com">About</a>
+          &emsp;
+          <a class="h1-hover-effect" style="text-decoration: none; float: left; font-family: 'Neurial Grotesk', system-ui; font-weight: 500; margin-left: 18px;" href="https://arboox.com/studio">Studio</a>
+           <br>
+          <br>
+          <a class="h1-hover-effect" style="text-decoration: none; float: left; font-family: 'Neurial Grotesk', system-ui; font-weight: 500;" href="https://arboox.com/privacy">Privacy</a>
+            &ensp;
+          <a class="h1-hover-effect" style="text-decoration: none; float: left; font-family: 'Neurial Grotesk', system-ui; font-weight: 500; margin-left: 18px;" href="https://support.arboox.com">Support</a>
+        </div>
+        <br>
+        <br>
+    <br>
+        <div style="margin-top: 24px; float: left; margin-left: 10%;">
+          <a class="h1-hover-effect material-icons-round" href="https://instagram.com/arbooxapp">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+</svg>
+          </a>
+          &ensp;
+          <a class="h1-hover-effect material-icons-round" href="https://arboox.com/@/arboox">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+<path d="M6.5556 8.1144L5.8572 10.008H7.2396L6.5556 8.1144Z"/>
+<path d="M11.7549 8.8704C12.2445 8.8704 12.4893 8.5824 12.4893 8.2152C12.4893 7.8552 12.2517 7.5816 11.7189 7.5816H10.6245V8.8704H11.7549Z"/>
+<path d="M10.6245 10.9944H11.8485C12.3453 10.9944 12.6333 10.7712 12.6333 10.3536C12.6333 9.9288 12.3381 9.684 11.8701 9.684H10.6245V10.9944Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.88 0C1.28942 0 0 1.28942 0 2.88V15.12C0 16.7106 1.28942 18 2.88 18H15.12C16.7106 18 18 16.7106 18 15.12V2.88C18 1.28942 16.7106 0 15.12 0H2.88ZM9.0468 11.88H7.9164L7.5204 10.7928H5.5692L5.166 11.88H4.1148L6.0804 6.696H7.0884L9.0468 11.88ZM13.5405 8.0928C13.5405 8.5032 13.3893 8.9856 12.8781 9.1944C13.4253 9.3816 13.7133 9.8712 13.7133 10.4256C13.7133 11.34 13.0293 11.88 11.9421 11.88H9.5949V6.696H11.7909C12.9357 6.696 13.5405 7.2288 13.5405 8.0928Z"/>
+</svg>
+          </a>
+                    &ensp;
+          <a class="h1-hover-effect material-icons-round" href="https://www.youtube.com/channel/UCUo8n6blz_XvGsMbkD5Mr6Q">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+</svg>
+          </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <br />
+      <br />
     </center>
+    <script>
+      function menuShow() {
+        div = document.getElementById("sheet");
+        div.style.display = "block";
+      }
+    </script>
+    <script>
+      document
+        .querySelector("#sheet-bar")
+        .addEventListener("click", function() {
+          document.querySelector("#sheet").style.display = "none";
+        });
+    </script>
   </body>
 </html>
